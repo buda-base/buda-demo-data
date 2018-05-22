@@ -1,6 +1,7 @@
 package io.bdrc.budademodata;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -8,16 +9,25 @@ import java.util.stream.Stream;
 
 import org.apache.jena.atlas.web.HttpException;
 import org.apache.jena.graph.Graph;
+import org.apache.jena.ontology.DatatypeProperty;
+import org.apache.jena.ontology.OntModel;
+import org.apache.jena.ontology.OntModelSpec;
+import org.apache.jena.ontology.Restriction;
 import org.apache.jena.query.Dataset;
 import org.apache.jena.query.DatasetFactory;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
+import org.apache.jena.rdf.model.Resource;
+import org.apache.jena.rdf.model.Statement;
 import org.apache.jena.rdfconnection.RDFConnection;
 import org.apache.jena.rdfconnection.RDFConnectionFuseki;
+import org.apache.jena.reasoner.Reasoner;
 import org.apache.jena.riot.RDFLanguages;
 import org.apache.jena.riot.RDFParser;
 import org.apache.jena.riot.RDFParserBuilder;
 import org.apache.jena.riot.RiotException;
+import org.apache.jena.util.iterator.ExtendedIterator;
+import org.apache.jena.vocabulary.OWL2;
 
 public class Upload {
     public static final String RESOURCE_PREFIX = "http://purl.bdrc.io/resource/";
@@ -39,9 +49,54 @@ public class Upload {
     public static final String FusekiQueryUrl = FusekiBaseUrl+"/query";
     public static RDFConnection fuConn;
     public static final String graphName = "http://purl.bdrc.io/tmp/budademodata";
+    public static Reasoner bdrcReasoner = null;
     
     static {
         init();
+    }
+    
+    public static Model getOntologyBaseModel() {
+        Model res;
+        try {
+            ClassLoader classLoader = Upload.class.getClassLoader();
+            InputStream inputStream = classLoader.getResourceAsStream("owl-schema/bdrc.owl");
+            res = ModelFactory.createDefaultModel();
+            res.read(inputStream, "", "RDF/XML");
+            inputStream.close();
+        } catch (Exception e) {
+            System.err.println("Error reading ontology file");
+            return null;
+        }
+        return res;
+    }
+    
+    // change Range Datatypes from rdf:PlainLitteral to rdf:langString
+    public static void rdf10tordf11(OntModel o) {
+        Resource RDFPL = o.getResource("http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral");
+        Resource RDFLS = o.getResource("http://www.w3.org/1999/02/22-rdf-syntax-ns#langString");
+        ExtendedIterator<DatatypeProperty> it = o.listDatatypeProperties();
+        while(it.hasNext()) {
+            DatatypeProperty p = it.next();
+            if (p.hasRange(RDFPL)) {
+                p.removeRange(RDFPL);
+                p.addRange(RDFLS);
+            }
+        }
+        ExtendedIterator<Restriction> it2 = o.listRestrictions();
+        while(it2.hasNext()) {
+            Restriction r = it2.next();
+            Statement s = r.getProperty(OWL2.onDataRange); // is that code obvious? no
+            if (s != null && s.getObject().asResource().equals(RDFPL)) {
+                s.changeObject(RDFLS);
+
+            }
+        }
+    }
+    
+    public static OntModel getOntologyModel(Model baseModel) {
+        OntModel ontoModel = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM, baseModel);
+        rdf10tordf11(ontoModel);
+        return ontoModel;
     }
     
     public static void init() {
@@ -52,6 +107,9 @@ public class Upload {
                 .gspEndpoint(FusekiDataUrl)
                 .updateEndpoint(FusekiDataUrl)
                 .build();
+        Model baseModel = getOntologyBaseModel(); 
+        OntModel ontModel = getOntologyModel(baseModel);
+        bdrcReasoner = BDRCReasoner.getReasoner(ontModel);
     }
     
     public static void setPrefixes(Model m) {
@@ -66,7 +124,7 @@ public class Upload {
         m.setNsPrefix("xsd", XSD_PREFIX);
     }
     
-    public static void addPathToDataset(final Graph g, final Path p) {
+    public static void addPathToGraph(final Graph g, final Path p) {
         try {
             RDFParserBuilder pb = RDFParser.create()
                      .source(p)
@@ -86,10 +144,11 @@ public class Upload {
         final Model m = ModelFactory.createDefaultModel();
         setPrefixes(m);
         final Graph g = m.getGraph();
-        final Stream<Path> pathStream =  Files.find(Paths.get("src/main/resources"), 5, (p, bfa) -> bfa.isRegularFile());
-        pathStream.forEach(p -> addPathToDataset(g, p));
+        final Stream<Path> pathStream =  Files.find(Paths.get("src/main/resources/files/"), 5, (p, bfa) -> bfa.isRegularFile());
+        pathStream.forEach(p -> addPathToGraph(g, p));
         pathStream.close();
-        ds.addNamedModel(graphName, m);
+        final Model infModel = ModelFactory.createInfModel(bdrcReasoner, m);
+        ds.addNamedModel(graphName, infModel);
         try {
             fuConn.delete(graphName);
         } catch (HttpException e) {
