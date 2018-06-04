@@ -4,6 +4,7 @@
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix wikibase: <http://wikiba.se/ontology-beta#> .
 @prefix tbr:   <http://purl.bdrc.io/ontology/toberemoved/> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix rkts:    <http://purl.rkts.eu/resource/> .
@@ -13,6 +14,7 @@
 @prefix tol:     <http://api.treasuryoflives.org/resource/> .
 @prefix schema: <http://schema.org/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
 @prefix umbel: <http://umbel.org/umbel#> .
 @prefix re:    <http://oclcsrw.google.code/redirect> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
@@ -28,7 +30,10 @@
 bdr:P6161 :sameAsVIAF viaf:23444930 ;
    :sameAs viaf:23444930 ;
    rdfs:seeAlso <http://zhishi.me/baidubaike/resource/%E5%AF%82%E5%A4%A9> ;
+   :sameAs wd:Q445460 ;
    rdfs:seeAlso <https://baike.baidu.com/item/%E5%AF%82%E5%A4%A9> ;
+   rdfs:seeAlso <http://www.rigpawiki.org/index.php?title=Shantideva> ;
+   rdfs:seeAlso <https://www.himalayanart.org/search/set.cfm?setID=661> ;
    :sameAs <https://openlibrary.org/authors/OL2985185A> .
 
 
@@ -65,117 +70,43 @@ Shantideva was born as a Brahmin in the southern country of Saurastra (in modern
   foaf:page <http://en.wikipedia.org/wiki/Shantideva> .
 
 wd:Q445460 a wikibase:Item ;
-	rdfs:label "寂天"@zh-hans ;
 	skos:prefLabel "寂天"@zh-hans ;
-	schema:name "寂天"@zh-hans ;
-	rdfs:label "寂天"@zh-hant ;
 	skos:prefLabel "寂天"@zh-hant ;
-	schema:name "寂天"@zh-hant ;
-	rdfs:label "寂天"@zh-hk ;
 	skos:prefLabel "寂天"@zh-hk ;
-	schema:name "寂天"@zh-hk ;
-	rdfs:label "寂天"@zh-cn ;
 	skos:prefLabel "寂天"@zh-cn ;
-	schema:name "寂天"@zh-cn ;
-	rdfs:label "寂天"@zh-sg ;
 	skos:prefLabel "寂天"@zh-sg ;
-	schema:name "寂天"@zh-sg ;
-	rdfs:label "寂天"@zh-tw ;
 	skos:prefLabel "寂天"@zh-tw ;
-	schema:name "寂天"@zh-tw ;
-	rdfs:label "Шантидэва"@ru ;
 	skos:prefLabel "Шантидэва"@ru ;
-	schema:name "Шантидэва"@ru ;
-	rdfs:label "Shantideva"@fr ;
 	skos:prefLabel "Shantideva"@fr ;
-	schema:name "Shantideva"@fr ;
-	rdfs:label "Shantideva"@en ;
 	skos:prefLabel "Shantideva"@en ;
-	schema:name "Shantideva"@en ;
-	rdfs:label "Shantideva"@es ;
 	skos:prefLabel "Shantideva"@es ;
-	schema:name "Shantideva"@es ;
-	rdfs:label "Šantideva"@sr-el ;
 	skos:prefLabel "Šantideva"@sr-el ;
-	schema:name "Šantideva"@sr-el ;
-	rdfs:label "Шантидева"@sr-ec ;
 	skos:prefLabel "Шантидева"@sr-ec ;
-	schema:name "Шантидева"@sr-ec ;
-	rdfs:label "ศานติเทวะ"@th ;
 	skos:prefLabel "ศานติเทวะ"@th ;
-	schema:name "ศานติเทวะ"@th ;
-	rdfs:label "Śāntideva"@it ;
 	skos:prefLabel "Śāntideva"@it ;
-	schema:name "Śāntideva"@it ;
-	rdfs:label "Shantideva"@de ;
 	skos:prefLabel "Shantideva"@de ;
-	schema:name "Shantideva"@de ;
-	rdfs:label "Shantideva"@id ;
 	skos:prefLabel "Shantideva"@id ;
-	schema:name "Shantideva"@id ;
-	rdfs:label "Šantidéva"@cs ;
 	skos:prefLabel "Šantidéva"@cs ;
-	schema:name "Šantidéva"@cs ;
-	rdfs:label "Шантидева"@bg ;
 	skos:prefLabel "Шантидева"@bg ;
-	schema:name "Шантидева"@bg ;
-	rdfs:label "Tịch Thiên"@vi ;
 	skos:prefLabel "Tịch Thiên"@vi ;
-	schema:name "Tịch Thiên"@vi ;
-	rdfs:label "Šantideva"@hr ;
 	skos:prefLabel "Šantideva"@hr ;
-	schema:name "Šantideva"@hr ;
-	rdfs:label "Shantideva"@nl ;
 	skos:prefLabel "Shantideva"@nl ;
-	schema:name "Shantideva"@nl ;
-	rdfs:label "Шантидева"@sr ;
 	skos:prefLabel "Шантидева"@sr ;
-	schema:name "Шантидева"@sr ;
-	rdfs:label "寂天"@zh ;
 	skos:prefLabel "寂天"@zh ;
-	schema:name "寂天"@zh ;
-	rdfs:label "Šāntideva"@et ;
 	skos:prefLabel "Šāntideva"@et ;
-	schema:name "Šāntideva"@et ;
-	rdfs:label "샨티데바,"@ko ;
 	skos:prefLabel "샨티데바,"@ko ;
-	schema:name "샨티데바,"@ko ;
-	rdfs:label "शान्तीदेव"@hi ;
 	skos:prefLabel "शान्तीदेव"@hi ;
-	schema:name "शान्तीदेव"@hi ;
-	rdfs:label "शान्तीदेव"@sa ;
 	skos:prefLabel "शान्तीदेव"@sa ;
-	schema:name "शान्तीदेव"@sa ;
-	rdfs:label "Śantideva"@pl ;
 	skos:prefLabel "Śantideva"@pl ;
-	schema:name "Śantideva"@pl ;
-	rdfs:label "寂天"@ja ;
 	skos:prefLabel "寂天"@ja ;
-	schema:name "寂天"@ja ;
-	rdfs:label "Shantideva"@nb ;
 	skos:prefLabel "Shantideva"@nb ;
-	schema:name "Shantideva"@nb ;
-	rdfs:label "Shantideva"@da ;
 	skos:prefLabel "Shantideva"@da ;
-	schema:name "Shantideva"@da ;
-	rdfs:label "Shantideva"@nn ;
 	skos:prefLabel "Shantideva"@nn ;
-	schema:name "Shantideva"@nn ;
-	rdfs:label "Shantideva"@sv ;
 	skos:prefLabel "Shantideva"@sv ;
-	schema:name "Shantideva"@sv ;
-	rdfs:label "Шантидэва"@bxr ;
 	skos:prefLabel "Шантидэва"@bxr ;
-	schema:name "Шантидэва"@bxr ;
-	rdfs:label "Santidéva"@hu ;
 	skos:prefLabel "Santidéva"@hu ;
-	schema:name "Santidéva"@hu ;
-	rdfs:label "শান্তিদেব"@bn ;
 	skos:prefLabel "শান্তিদেব"@bn ;
-	schema:name "শান্তিদেব"@bn ;
-	rdfs:label "சாந்திதேவர்"@ta ;
 	skos:prefLabel "சாந்திதேவர்"@ta ;
-	schema:name "சாந்திதேவர்"@ta ;
 	schema:description "8th-century Indian Buddhist monk and scholar"@en,
 		"indischer Königssohn"@de,
 		"philosophe indien madhyamika, une branche du bouddhisme mahāyāna"@fr,
@@ -200,7 +131,7 @@ wd:Q445460 a wikibase:Item ;
 		"Bhusuku"@nl,
 		"Bhusukupada"@nl,
 		"Śāntideva"@sa ;
-	owl:sameAs <http://viaf.org/viaf/23444930> ;
+	owl:sameAs viaf:23444930 ;
 	owl:sameAs <http://id.loc.gov/authorities/names/n80102717> ;
 	owl:sameAs <http://d-nb.info/gnd/119141140> ;
 	owl:sameAs <http://data.bnf.fr/ark:/12148/cb12093865t> ;
@@ -208,6 +139,21 @@ wd:Q445460 a wikibase:Item ;
 	owl:sameAs <http://www.idref.fr/029277736/id> ;
 	owl:sameAs <http://data.bibliotheken.nl/id/thes/p068528388> ;
 	owl:sameAs <http://id.worldcat.org/fast/1845890> ;
+	rdfs:seeAlso <http://worldcat.org/identities/lccn-n80102717/> ;
 	owl:sameAs <http://id.ndl.go.jp/auth/ndlna/00474410> ;
 	owl:sameAs <https://libris.kb.se/resource/auth/198120> ;
+	rdfs:seeAlso <http://www.lotsawahouse.org/bo/indian-masters/shantideva/> ;
 	owl:sameAs <https://livedata.bibsys.no/authority/90983014> .
+
+
+<http://authority.dila.edu.tw/person/?fromInner=A017001> a :Person ;
+    skos:prefLabel "寂天"@zh-hant ;
+    skos:altLabel "寂鎧"@zh-hant , "寂鎧梵"@zh-hant , "Śāntideva"@sa-x-iast , "Shi-ba lha"@bo-x-dts ;
+    :personGender  bdr:GenderMale ;
+    :personEvent [ a             :PersonBirth ;
+           :onYear    0650
+         ] ,
+         [ a             :PersonDeath ;
+           :onYear    0750
+         ] .
+

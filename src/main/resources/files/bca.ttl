@@ -1,0 +1,92 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix tbr:   <http://purl.bdrc.io/ontology/toberemoved/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rkts:    <http://purl.rkts.eu/resource/> .
+@prefix viaf:    <http://viaf.org/viaf/> .
+@prefix wcat:    <http://www.worldcat.org/oclc/> .
+@prefix wde:     <http://www.wikidata.org/entity/> .
+@prefix tol:     <http://api.treasuryoflives.org/resource/> .
+@prefix schema: <http://schema.org/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix umbel: <http://umbel.org/umbel#> .
+@prefix re:    <http://oclcsrw.google.code/redirect> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rdagr2: <http://rdvocab.info/ElementsGr2/> .
+@prefix bio: <http://purl.org/vocab/bio/0.1/> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+
+
+bdr:W3CN1560 :expressionOf bdr:W19740 .
+
+bdr:W19740 :hasExpression bdr:W3CN1560 , bdr:WZHBCA .
+   
+bdr:PTBCA a :Person ;
+    rdfs:seeAlso <https://dazangthings.nz/cbc/person/158/> ;
+    rdfs:seeAlso <http://authority.dila.edu.tw/person/?fromInner=A000146> ;
+    skos:prefLabel "天息災"@zh-hant , "Tianxizai"@zh-x-phon-en .
+
+bdr:WZHBCA a :Work ;
+    :workType bdr:WorkTypeAbstractWork ;
+    :workLangScript :ZhHant ;
+    skos:prefLabel "菩提行經"@zh-hant ;
+    :workTitle  [ a             :WorkBibliographicalTitle ;
+                    rdfs:label    "菩提行經"@zh-hant
+                  ] ;
+    :creatorTranslator bdr:PTBCA ;
+    :expressionOf bdr:W19740 ;
+    rdfs:seeAlso <https://dazangthings.nz/cbc/text/1514/> ;
+    :workRefTaisho "T1662" ;
+    :hasExpression bdr:WCBETA_BCA , bdr:WSAT_BCA .
+
+bdr:WCBETA_BCA a :Work ;
+    :contentProvider bdr:CPCBETA ;
+    :expressionOf bdr:WZHBCA ;
+    rdfs:seeAlso <http://tripitaka.cbeta.org/T32n1662> ;
+    :workLangScript :ZhHant .
+    
+
+bdr:W0RTT3216 :hasExpression bdr:WBNF_BCA .
+
+bdr:WBNF_BCA a :Work ;
+	:contentProvider bdr:CPBnF ;
+	skos:prefLabel "Manuscrit Pelliot tibétain 794"@fr ;
+	rdfs:comment "Dunhuang manuscript"@en ;
+    :workMaterial  bdr:MaterialPaper ;
+    :workObjectType  bdr:ObjectTypeManuscript ;
+    :license bdr:PublicDomain ;
+    :expressionOf bdr:W0RTT3216 ;
+    :workHasItemImageAsset  bdr:IBNF_BCA .
+
+bdr:IBNF_BCA a :ItemImageAsset ;
+   :itemHasVolume  bdr:VBNF_BCA ;
+   :itemImageAssetForWork  bdr:WBNF_BCA ;
+   :itemVolumes  1 .
+
+bdr:VBNF_BCA a :VolumeImageAsset ;
+   :hasIIIFManifest  <http://gallica.bnf.fr/iiif/ark:/12148/btv1b8307216j/manifest.json> ;
+   :volumeOf  bdr:ISAT_BCA .
+
+bdr:WSAT_BCA a :Work ;
+	:contentProvider bdr:CPSAT ;
+    :expressionOf bdr:WZHBCA ;
+    :workLangScript :ZhHant ;
+    :workHasItemImageAsset  bdr:ISAT_BCA ;
+    rdfs:seeAlso <http://21dzk.l.u-tokyo.ac.jp/SAT2012/T1662.html> .
+
+bdr:ISAT_BCA a :ItemImageAsset ;
+   :itemHasVolume  bdr:VSAT_BCA ;
+   :itemImageAssetForWork  bdr:WSAT_BCA ;
+   :itemVolumes  1 .
+
+bdr:VSAT_BCA a :VolumeImageAsset ;
+   :hasIIIFManifest  <https://dzkimgs.l.u-tokyo.ac.jp/iiif/taisho/manifests/1662_32_manifest.json> ;
+   :volumeOf  bdr:ISAT_BCA .
