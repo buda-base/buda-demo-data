@@ -25,9 +25,9 @@
 @prefix wd: <http://www.wikidata.org/entity/> .
 
 
-bdr:W3CN1560 :expressionOf bdr:W19740 .
+bdr:W3CN1560 :workExpressionOf bdr:W0RTT3216 .
 
-bdr:W19740 :hasExpression bdr:W3CN1560 , bdr:WZHBCA .
+bdr:W19740 :workHasExpression bdr:WZHBCA .
    
 bdr:PTBCA a :Person ;
     rdfs:seeAlso <https://dazangthings.nz/cbc/person/158/> ;
@@ -42,19 +42,19 @@ bdr:WZHBCA a :Work ;
                     rdfs:label    "菩提行經"@zh-hant
                   ] ;
     :creatorTranslator bdr:PTBCA ;
-    :expressionOf bdr:W19740 ;
+    :workExpressionOf bdr:W19740 ;
     rdfs:seeAlso <https://dazangthings.nz/cbc/text/1514/> ;
     :workRefTaisho "T1662" ;
-    :hasExpression bdr:WCBETA_BCA , bdr:WSAT_BCA .
+    :workHasExpression bdr:WCBETA_BCA , bdr:WSAT_BCA .
 
 bdr:WCBETA_BCA a :Work ;
     :contentProvider bdr:CPCBETA ;
-    :expressionOf bdr:WZHBCA ;
+    :workExpressionOf bdr:WZHBCA ;
     rdfs:seeAlso <http://tripitaka.cbeta.org/T32n1662> ;
     :workLangScript :ZhHant .
     
 
-bdr:W0RTT3216 :hasExpression bdr:WBNF_BCA .
+bdr:W0RTT3216 :workHasExpression bdr:WBNF_BCA , bdr:W3CN1560 .
 
 bdr:WBNF_BCA a :Work ;
 	:contentProvider bdr:CPBnF ;
@@ -63,7 +63,7 @@ bdr:WBNF_BCA a :Work ;
     :workMaterial  bdr:MaterialPaper ;
     :workObjectType  bdr:ObjectTypeManuscript ;
     :license bdr:PublicDomain ;
-    :expressionOf bdr:W0RTT3216 ;
+    :workExpressionOf bdr:W0RTT3216 ;
     :workHasItemImageAsset  bdr:IBNF_BCA .
 
 bdr:IBNF_BCA a :ItemImageAsset ;
@@ -77,7 +77,7 @@ bdr:VBNF_BCA a :VolumeImageAsset ;
 
 bdr:WSAT_BCA a :Work ;
 	:contentProvider bdr:CPSAT ;
-    :expressionOf bdr:WZHBCA ;
+    :workExpressionOf bdr:WZHBCA ;
     :workLangScript :ZhHant ;
     :workHasItemImageAsset  bdr:ISAT_BCA ;
     rdfs:seeAlso <http://21dzk.l.u-tokyo.ac.jp/SAT2012/T1662.html> .
