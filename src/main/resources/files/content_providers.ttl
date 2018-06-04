@@ -6,6 +6,7 @@
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 @prefix tbr:   <http://purl.bdrc.io/ontology/toberemoved/> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
 
 
 bdr:CPBDRC a adm:ContentProvider , foaf:Organization ;
