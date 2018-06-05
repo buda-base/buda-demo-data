@@ -22,9 +22,11 @@ import org.apache.jena.rdf.model.Statement;
 import org.apache.jena.rdfconnection.RDFConnection;
 import org.apache.jena.rdfconnection.RDFConnectionFuseki;
 import org.apache.jena.reasoner.Reasoner;
+import org.apache.jena.riot.Lang;
 import org.apache.jena.riot.RDFLanguages;
 import org.apache.jena.riot.RDFParser;
 import org.apache.jena.riot.RDFParserBuilder;
+import org.apache.jena.riot.RDFWriter;
 import org.apache.jena.riot.RiotException;
 import org.apache.jena.util.iterator.ExtendedIterator;
 import org.apache.jena.vocabulary.OWL2;
@@ -148,13 +150,15 @@ public class Upload {
         pathStream.forEach(p -> addPathToGraph(g, p));
         pathStream.close();
         final Model infModel = ModelFactory.createInfModel(bdrcReasoner, m);
+        //RDFWriter.create().source(infModel.getGraph()).lang(Lang.TTL).build().output(System.out);
         ds.addNamedModel(graphName, infModel);
+        RDFWriter.create().source(ds).lang(Lang.TRIG).build().output(System.out);
         try {
             fuConn.delete(graphName);
         } catch (HttpException e) {
             System.out.println("didn't find graph "+graphName);
         }
-        fuConn.put(graphName, m);
+        fuConn.put(graphName, infModel);
         //fuConn.putDataset(ds);
         fuConn.commit();
         fuConn.end();

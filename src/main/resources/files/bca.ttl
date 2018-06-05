@@ -26,17 +26,27 @@
 
 
 bdr:W3CN1560 :workExpressionOf bdr:W0RTT3216 .
+bdr:W21971 :workExpressionOf bdr:W0RTT3216 .
+bdr:W1EE17 :workExpressionOf bdr:WMNBCA .
 
-bdr:W19740 :workHasExpression bdr:WZHBCA .
+bdr:W19740 :workHasExpression bdr:WZHBCA , bdr:MNBCA .
    
 bdr:PTBCA a :Person ;
     rdfs:seeAlso <https://dazangthings.nz/cbc/person/158/> ;
     rdfs:seeAlso <http://authority.dila.edu.tw/person/?fromInner=A000146> ;
     skos:prefLabel "天息災"@zh-hant , "Tianxizai"@zh-x-phon-en .
 
+bdr:WMNBCA a :Work ;
+    :workType bdr:WorkTypeAbstractWork ;
+    :workType bdr:WorkTypeAbstractWork ;
+    :workLangScript :Mn ;
+    skos:prefLabel "bodisung narun yabudal-dur oruqui neretu sastir" ;
+    :workExpressionOf bdr:W19740 ;
+    :workHasExpression bdr:W1EE17 .
+
 bdr:WZHBCA a :Work ;
     :workType bdr:WorkTypeAbstractWork ;
-    :workLangScript :ZhHant ;
+    :workLangScript :Zh ;
     skos:prefLabel "菩提行經"@zh-hant ;
     :workTitle  [ a             :WorkBibliographicalTitle ;
                     rdfs:label    "菩提行經"@zh-hant
@@ -54,7 +64,7 @@ bdr:WCBETA_BCA a :Work ;
     :workLangScript :ZhHant .
     
 
-bdr:W0RTT3216 :workHasExpression bdr:WBNF_BCA , bdr:W3CN1560 .
+bdr:W0RTT3216 :workHasExpression bdr:WBNF_BCA , bdr:W3CN1560 , bdr:W21971 .
 
 bdr:WBNF_BCA a :Work ;
 	:contentProvider bdr:CPBnF ;
