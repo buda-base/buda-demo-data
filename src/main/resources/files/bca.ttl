@@ -64,39 +64,42 @@ bdr:WCBETA_BCA a :Work ;
     :workLangScript :ZhHant .
     
 
-bdr:W0RTT3216 :workHasExpression bdr:WBNF_BCA , bdr:W3CN1560 , bdr:W21971 .
+bdr:W0RTT3216 :workHasExpression bdr:WBNF_BCA , bdr:W3CN1560 , bdr:W21971 , bdr:W1PD95844_3603 , bdr:W22704_3441 , bdr:W23702_3441 , bdr:W1KG13126_3449 , bdr:W25983_0035 .
 
 bdr:WBNF_BCA a :Work ;
 	:contentProvider bdr:CPBnF ;
 	skos:prefLabel "Manuscrit Pelliot tibétain 794"@fr ;
+  adm:license bdr:PublicDomain ;
+  adm:access bdr:AccessOpen ;
 	rdfs:comment "Dunhuang manuscript"@en ;
-    :workMaterial  bdr:MaterialPaper ;
-    :workObjectType  bdr:ObjectTypeManuscript ;
-    :license bdr:PublicDomain ;
-    :workExpressionOf bdr:W0RTT3216 ;
-    :workHasItemImageAsset  bdr:IBNF_BCA .
+  :workMaterial  bdr:MaterialPaper ;
+  :workObjectType  bdr:ObjectTypeManuscript ;
+  :workExpressionOf bdr:W0RTT3216 ;
+  :workHasItemImageAsset  bdr:IBNF_BCA .
 
 bdr:IBNF_BCA a :ItemImageAsset ;
-   :itemHasVolume  bdr:VBNF_BCA ;
-   :itemImageAssetForWork  bdr:WBNF_BCA ;
-   :itemVolumes  1 .
+  :itemHasVolume  bdr:VBNF_BCA ;
+  :itemImageAssetForWork  bdr:WBNF_BCA ;
+  :itemVolumes  1 .
 
 bdr:VBNF_BCA a :VolumeImageAsset ;
-   :hasIIIFManifest  <http://gallica.bnf.fr/iiif/ark:/12148/btv1b8307216j/manifest.json> ;
-   :volumeOf  bdr:ISAT_BCA .
+  :hasIIIFManifest  <http://gallica.bnf.fr/iiif/ark:/12148/btv1b8307216j/manifest.json> ;
+  :volumeOf  bdr:IBNF_BCA .
 
 bdr:WSAT_BCA a :Work ;
 	:contentProvider bdr:CPSAT ;
-    :workExpressionOf bdr:WZHBCA ;
-    :workLangScript :ZhHant ;
-    :workHasItemImageAsset  bdr:ISAT_BCA ;
-    rdfs:seeAlso <http://21dzk.l.u-tokyo.ac.jp/SAT2012/T1662.html> .
+  adm:license bdr:LicenseCCBYSA4U ;
+  adm:access bdr:AccessOpen ;
+  :workExpressionOf bdr:WZHBCA ;
+  :workLangScript :ZhHant ;
+  :workHasItemImageAsset  bdr:ISAT_BCA ;
+  rdfs:seeAlso <http://21dzk.l.u-tokyo.ac.jp/SAT2012/T1662.html> .
 
 bdr:ISAT_BCA a :ItemImageAsset ;
-   :itemHasVolume  bdr:VSAT_BCA ;
-   :itemImageAssetForWork  bdr:WSAT_BCA ;
-   :itemVolumes  1 .
+  :itemHasVolume  bdr:VSAT_BCA ;
+  :itemImageAssetForWork  bdr:WSAT_BCA ;
+  :itemVolumes  1 .
 
 bdr:VSAT_BCA a :VolumeImageAsset ;
-   :hasIIIFManifest  <https://dzkimgs.l.u-tokyo.ac.jp/iiif/taisho/manifests/1662_32_manifest.json> ;
-   :volumeOf  bdr:ISAT_BCA .
+  :hasIIIFManifest  <https://dzkimgs.l.u-tokyo.ac.jp/iiif/taisho/manifests/1662_32_manifest.json> ;
+  :volumeOf  bdr:ISAT_BCA .
