@@ -22,12 +22,9 @@ bdr:WCBC2237 a :Work ;
     :workTitle  [ a             :WorkBibliographicalTitle ;
                     rdfs:label    "增壹阿含經"@zh-hant
                   ] ;
-    :creatorTranslator bdr:PTBCA ;
-    :workExpressionOf bdr:W19740 ;
     :originalRecord "https://dazangthings.nz/cbc/text/2237/"^^xsd:anyURI ;
     :workRefTaisho "T0125" ;
-    :creatorTranslator bdr:WCBC47 , bdr:WCBC7 ;
-    :workHasExpression bdr:WCBETA_BCA , bdr:WSAT_BCA .
+    :creatorTranslator bdr:WCBC47 , bdr:WCBC7 .
 
 
 bdr:WCBCST a :Work ;
