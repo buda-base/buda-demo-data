@@ -93,3 +93,7 @@ bdr:CPFPL a adm:ContentProvider , foaf:Organization ;
     skos:prefLabel "FPL" ;
     skos:altLabel "Fragile Palm Leaves Foundation"@en .
 
+bdr:CPGretil a adm:ContentProvider , foaf:Organization ;
+    foaf:homepage <http://gretil.sub.uni-goettingen.de/> ;
+    skos:prefLabel "GRETIL" ;
+    skos:altLabel "Göttingen Register of Electronic Texts in Indian Languages"@en .

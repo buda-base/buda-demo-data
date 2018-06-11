@@ -152,7 +152,7 @@ public class Upload {
         final Model infModel = ModelFactory.createInfModel(bdrcReasoner, m);
         //RDFWriter.create().source(infModel.getGraph()).lang(Lang.TTL).build().output(System.out);
         ds.addNamedModel(graphName, infModel);
-        RDFWriter.create().source(ds).lang(Lang.TRIG).build().output(System.out);
+        //RDFWriter.create().source(ds).lang(Lang.TRIG).build().output(System.out);
         try {
             fuConn.delete(graphName);
         } catch (HttpException e) {

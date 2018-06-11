@@ -29,11 +29,11 @@ bdr:W3CN1560 :workExpressionOf bdr:W0RTT3216 .
 bdr:W21971 :workExpressionOf bdr:W0RTT3216 .
 bdr:W1EE17 :workExpressionOf bdr:WMNBCA .
 
-bdr:W19740 :workHasExpression bdr:WZHBCA , bdr:MNBCA .
+bdr:W19740 :workHasExpression bdr:WZHBCA , bdr:WMNBCA , bdr:WGR_BCA_1 , bdr:WGR_BCA_2 .
    
 bdr:PTBCA a :Person ;
-    rdfs:seeAlso <https://dazangthings.nz/cbc/person/158/> ;
-    rdfs:seeAlso <http://authority.dila.edu.tw/person/?fromInner=A000146> ;
+    rdfs:seeAlso "https://dazangthings.nz/cbc/person/158/"^^xsd:anyURI ;
+    rdfs:seeAlso "http://authority.dila.edu.tw/person/?fromInner=A000146"^^xsd:anyURI ;
     skos:prefLabel "天息災"@zh-hant , "Tianxizai"@zh-x-phon-en .
 
 bdr:WMNBCA a :Work ;
@@ -53,14 +53,14 @@ bdr:WZHBCA a :Work ;
                   ] ;
     :creatorTranslator bdr:PTBCA ;
     :workExpressionOf bdr:W19740 ;
-    rdfs:seeAlso <https://dazangthings.nz/cbc/text/1514/> ;
+    rdfs:seeAlso "https://dazangthings.nz/cbc/text/1514/"^^xsd:anyURI ;
     :workRefTaisho "T1662" ;
     :workHasExpression bdr:WCBETA_BCA , bdr:WSAT_BCA .
 
 bdr:WCBETA_BCA a :Work ;
     :contentProvider bdr:CPCBETA ;
     :workExpressionOf bdr:WZHBCA ;
-    rdfs:seeAlso <http://tripitaka.cbeta.org/T32n1662> ;
+    rdfs:seeAlso "http://tripitaka.cbeta.org/T32n1662"^^xsd:anyURI ;
     :workLangScript :ZhHant .
     
 
@@ -75,6 +75,7 @@ bdr:WBNF_BCA a :Work ;
   :workMaterial  bdr:MaterialPaper ;
   :workObjectType  bdr:ObjectTypeManuscript ;
   :workExpressionOf bdr:W0RTT3216 ;
+  :originalRecord "http://gallica.bnf.fr/ark:/12148/btv1b8307216j"^^xsd:anyURI ;
   :workHasItemImageAsset  bdr:IBNF_BCA .
 
 bdr:IBNF_BCA a :ItemImageAsset ;
@@ -93,7 +94,7 @@ bdr:WSAT_BCA a :Work ;
   :workExpressionOf bdr:WZHBCA ;
   :workLangScript :ZhHant ;
   :workHasItemImageAsset  bdr:ISAT_BCA ;
-  rdfs:seeAlso <http://21dzk.l.u-tokyo.ac.jp/SAT2012/T1662.html> .
+  :originalRecord "http://21dzk.l.u-tokyo.ac.jp/SAT2012/T1662.html"^^xsd:anyURI .
 
 bdr:ISAT_BCA a :ItemImageAsset ;
   :itemHasVolume  bdr:VSAT_BCA ;
@@ -103,3 +104,19 @@ bdr:ISAT_BCA a :ItemImageAsset ;
 bdr:VSAT_BCA a :VolumeImageAsset ;
   :hasIIIFManifest  <https://dzkimgs.l.u-tokyo.ac.jp/iiif/taisho/manifests/1662_32_manifest.json> ;
   :volumeOf  bdr:ISAT_BCA .
+
+bdr:WGR_BCA_1 a :Work ;
+  :contentProvider bdr:CPGretil ;
+  :workExpressionOf bdr:W19740 ;
+  adm:license bdr:LicenseCopyrighted ;
+  adm:access bdr:AccessOpen ;
+  :originalRecord "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/santbcpu.htm"^^xsd:anyURI ;
+  skos:prefLabel "Santideva: Bodhicaryavatara (input by Richard Mahoney)"@en .
+
+bdr:WGR_BCA_2 a :Work ;
+  :contentProvider bdr:CPGretil ;
+  :workExpressionOf bdr:W19740 ;
+  adm:license bdr:LicenseCopyrighted ;
+  adm:access bdr:AccessOpen ;
+  :originalRecord "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/bsa003_u.htm"^^xsd:anyURI ;
+  skos:prefLabel "Santideva: Bodhicaryavatara [alternative version] (input by members of the Sanskrit Buddhist Canon Input Project)"@en .
