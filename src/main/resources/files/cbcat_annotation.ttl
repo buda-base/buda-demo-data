@@ -1,0 +1,65 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+
+bdr:WCBC47 a :Person ;
+	:originalRecord "https://dazangthings.nz/cbc/person/47/"^^xsd:anyURI ;
+	skos:prefLabel "Saṃghadeva"@sa-x-iast , "僧迦提婆"@zh-hant .
+
+bdr:WCBC7 a :Person ;
+	:originalRecord "https://dazangthings.nz/cbc/person/7/"^^xsd:anyURI ;
+	skos:prefLabel "Zhu Fonian"@zh-x-phon-en , "竺佛念"@zh-hant .
+
+bdr:WCBC2237 a :Work ;
+    :workType bdr:WorkTypeAbstractWork ;
+    :workLangScript :Zh ;
+    skos:prefLabel "增壹阿含經"@zh-hant ;
+    :workTitle  [ a             :WorkBibliographicalTitle ;
+                    rdfs:label    "增壹阿含經"@zh-hant
+                  ] ;
+    :creatorTranslator bdr:PTBCA ;
+    :workExpressionOf bdr:W19740 ;
+    :originalRecord "https://dazangthings.nz/cbc/text/2237/"^^xsd:anyURI ;
+    :workRefTaisho "T0125" ;
+    :creatorTranslator bdr:WCBC47 , bdr:WCBC7 ;
+    :workHasExpression bdr:WCBETA_BCA , bdr:WSAT_BCA .
+
+
+bdr:WCBCST a :Work ;
+	:workType bdr:WorkTypeAbstractWork ;
+    :workLangScript :Zh ;
+    :bibLabel "T" ;
+    skos:prefLabel "CBETA [Chinese Buddhist Electronic Text Association] (2008). Taishō shinshū daizōkyō 大正新脩大藏經. Edited by Takakusu Junjirō 高楠順次郎 and Watanabe Kaigyoku 渡邊海旭. Tokyo: Taishō shinshū daizōkyō kankōkai/Daizō shuppan, 1924-1932. CBReader v 5.0, 2014. "@en .
+
+bdr:WCBCSR a :Work ;
+	:workType bdr:WorkTypeAbstractWork ;
+    :workLangScript :Zh ;
+    :bibLabel "Radich2012a" ;
+    skos:prefLabel "Radich, Michael. “On the Ekottarikāgama 增壹阿含經 T 125 as a Work of Zhu Fonian 竺佛念.” Journal of Chinese Buddhist Studies 30 (2017): 1-31."@en .
+
+bdr:AWCBCST_001 a :Assertion ;
+	rdfs:comment "On the basis of a large set of diverse stylistic markers, Radich argues that the Ekottarikāgama T125 was translated by Zhu Fonian, and not by Saṃghadeva, as the received ascription would have it. He also considers implications of his findings for the broader corpus of texts ascribed to Zhu Fonian. Radich presents a total of 137 markers which never appear in the Madhyamāgama T26, the benchmark text for Saṃghadeva, but occur a total of over 6,200 times in the Ekottarikāgama, and approx. 15,520 times further in the core Zhu Fonian corpus (DĀ T1, T212, T656, T1428 and T1464). In combination with the external evidence, Radich claims, this internal evidence provides extremely strong support for Zhu Fonian’s translatorship (or perhaps partial authorship) of the text. Radich's study is intended to work in concert with Radich and Anālayo (2017), which presents further evidence in support of the same reascription." ;
+	:workLocation [ :workLocationWork bdr:WCBCSR ] .
+
+bdr:AWCBCST_002 a :Assertion ;
+	:workLocation [ :workLocationWork bdr:WCBCST ] .
+
+bdr:SWCBC2237_001 a rdf:Statement ;
+	rdf:subject bdr:WCBC2237 ;
+	rdf:predicate :creatorTranslator ;
+	rdf:object bdr:WCBC47 ;
+	:statementNote 1 ;
+	:statementSupportedBy bdr:AWCBCST_002 .
+
+bdr:SWCBC2237_002 a rdf:Statement ;
+	rdf:subject bdr:WCBC2237 ;
+	rdf:predicate :creatorTranslator ;
+	rdf:object bdr:WCBC7 ;
+	:statementNote -1 ;
+	:statementSupportedBy bdr:AWCBCST_001 .
+
