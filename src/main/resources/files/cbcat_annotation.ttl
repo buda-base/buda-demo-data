@@ -39,14 +39,14 @@ bdr:WCBCST a :Work ;
 	:workType bdr:WorkTypeAbstractWork ;
     :workLangScript :Zh ;
     :bibLabel "T" ;
-    :seeAlso "https://dazangthings.nz/cbc/source/1/"^xsd:anyURI ;
+    :seeAlso "https://dazangthings.nz/cbc/source/1/"^^xsd:anyURI ;
     skos:prefLabel "CBETA [Chinese Buddhist Electronic Text Association] (2008). Taishō shinshū daizōkyō 大正新脩大藏經. Edited by Takakusu Junjirō 高楠順次郎 and Watanabe Kaigyoku 渡邊海旭. Tokyo: Taishō shinshū daizōkyō kankōkai/Daizō shuppan, 1924-1932. CBReader v 5.0, 2014. "@en .
 
 bdr:WCBCSR a :Work ;
 	:workType bdr:WorkTypeAbstractWork ;
     :workLangScript :Zh ;
     :bibLabel "Radich2012a" ;
-    :seeAlso "https://dazangthings.nz/cbc/source/404/"^xsd:anyURI ;
+    :seeAlso "https://dazangthings.nz/cbc/source/404/"^^xsd:anyURI ;
     skos:prefLabel "Radich, Michael. “On the Ekottarikāgama 增壹阿含經 T 125 as a Work of Zhu Fonian 竺佛念.” Journal of Chinese Buddhist Studies 30 (2017): 1-31."@en .
 
 bdr:ASWCBCST_001 a :Assertion ;
@@ -62,7 +62,7 @@ bdr:ANWCBC2237_AN001 a oa:Annotation ;
 	oa:hasTarget bdr:SWCBC2237_002 ;
     oa:motivatedBy oa:assessing ;
 	oa:hasBody [
-		:supportedByLocation [ :workLocationWork bdr:WCBCST ] ,
+		:supportedByLocation [ :workLocationWork bdr:WCBCST ] ;
 		:statementScore 1 ;
 	] .
 
@@ -75,6 +75,6 @@ bdr:ANWCBC2237_AN002 a oa:Annotation ;
 	] ;
     oa:motivatedBy oa:assessing ;
 	oa:hasBody [
-		:supportedByAssertion bdr:ASWCBCST_001 ,
+		:supportedByAssertion bdr:ASWCBCST_001 ;
 		:statementScore -1 ;
 	] .
