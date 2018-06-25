@@ -1,0 +1,165 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix sc:    <http://suttacentral.net/resource/> .
+@prefix viaf:  <http://viaf.org/viaf/> .
+@prefix worldcat: <http://www.worldcat.org/oclc/> .
+
+sc:P001 a :Person ;
+	skos:prefLabel "Peter Skilling" ;
+	:personGender  bdr:GenderMale ;
+	:personName  [ a            :PersonFamilyName ;
+	                 rdfs:label "Skilling"@en
+	               ] ,
+	     [ a             :PersonPrimaryName ;
+	       rdfs:label    "Peter"@en
+	     ] ;
+	owl:sameAs viaf:101021942 .
+
+sc:S001 a :Work ;
+	skos:prefLabel "Mahāsūtras: Great Discourses of the Buddha" ;
+    :workTitle  [ a           :WorkBibliographicalTitle ;
+                rdfs:label    "Mahāsūtras: Great Discourses of the Buddha, Volume I: Texts."@en
+              ] ;
+    owl:sameAs worldcat:417065073 ;
+    :creatorMainAuthor sc:P001 .
+
+sc:WA001 a :Work ;
+	:workType bdr:WorkTypeAbstract ;
+	owl:sameAs bdr:W0RKA0033 ;
+	skos:prefLabel "Āṭānāṭiya Sutta"@pi-x-iast ;
+    :workTitle  [ a       :WorkBibliographicalTitle ;
+            rdfs:label    "Āṭānāṭiya Sutta"@pi-x-iast
+          ] ;
+	:workHasExpression sc:WAD33 , sc:WDN32 , sc:WAT1245 , sc:WSF71 ;
+	:note [ :noteText "This abstract work is a new abstract entity" ] .
+
+sc:WAD33 a :Work ;
+	:workType bdr:WorkTypeAbstractWork ;
+	rdfs:prefLabel "ལྕང་ལོ་ཅན་གྱི་ཕོ་བྲང་གི་མདོ།"@bo ;
+	:langScript bdr:BoTibt ;
+	owl:sameAs bdr:W0RKT0033 ;
+	rdfs:seeAlso <https://suttacentral.net/d33> ;
+    :workTitle  [ a             :WorkBibliographicalTitle ;
+            rdfs:label    "ལྕང་ལོ་ཅན་གྱི་ཕོ་བྲང་གི་མདོ།"@bo
+          ] ;
+	:workExpressionOf sc:WA001 ;
+	:workHasExpression sc:WD33 ;
+	:note [:noteText "This abstract work doesn't really exist in your data neither but is important as this is where the link with other Tibetan databases can occur" ] .
+
+sc:WD33 a :Work ;
+	rdfs:prefLabel "ལྕང་ལོ་ཅན་གྱི་ཕོ་བྲང་གི་མདོ།"@bo ;
+	:langScript bdr:BoTibt ;
+	:workExpressionOf sc:WD33 ;
+	rdfs:seeAlso <https://suttacentral.net/d33> ;
+    :workTitle  [ a             :WorkBibliographicalTitle ;
+            rdfs:label    "ལྕང་ལོ་ཅན་གྱི་ཕོ་བྲང་གི་མདོ།"@bo
+          ] ;
+    :workPartOf sc:S001 ;
+    :workLocation [
+    	:workLocationWork sc:S001 ;
+    	:locationPage 460 ;
+    	:locationEndPage 563
+    ] ;
+    :note [:noteText "this work corresponds to the version of the Sutra that is present on SuttaCentral"] ;
+    :workHasItemEtext sc:ID33 .
+
+sc:ID33 a :ItemEtext ;
+	:itemEtextForWork sc:WD33 ;
+	:itemHasVolume sc:VD33 ;
+	:note [:noteText "this is the item corresponding the the etext (see bibliographical model)"] .
+
+sc:VD33 a :VolumeEtextAsset ;
+	:volumeOf sc:ID33 ;
+	:volumeHasEtext sc:VD33 ;
+	:note [:noteText "in our current model, each item has a volume, although most of the time only one"] .
+
+sc:UTD33 a :Etext ;
+	:etextInVolume sc:VD33 ;
+	:note [:noteText "here would go the actual Tibetan Unicode text, but it would be best to actually do that in a future phase"] .
+
+sc:WDN_PTS a :Work ;
+	skos:prefLabel "The Dīgha-Nikāya"@en ;
+	owl:sameAs <http://www.worldcat.org/oclc/316295221> ;
+	:workHasPart sc:WDN32 .
+
+sc:WDN32 a :Work ;
+	skos:prefLabel "Āṭānāṭiya Sutta"@pi-x-iast ;
+	:langScript bdr:Pi ;
+	rdfs:seeAlso <https://suttacentral.net/dn32> ;
+    :workTitle  [ a             :WorkBibliographicalTitle ;
+            rdfs:label    "Āṭānāṭiya Sutta"@pi-x-iast
+          ] ;
+    :workPartOf sc:WDN_PTS ;
+	:workExpressionOf sc:WA001 ;
+	:workLocation [ :locationWork sc:WDN_PTS ;
+		:locationVolume 3 ;
+		:locationPage 194 ;
+		:locationEndPage 206
+		] ;
+	:note [:noteText "there could be an intermediate expression between this and sc:WA001 representing a Pali version, this is a subjective choice" ] ;
+	:note [:noteText "would have item, volume and etext corresponding to https://suttacentral.net/dn32/pli/ms" ] .
+
+sc:P003 a :Person ;
+	skos:prefLabel "Bhikkhu Sujato"@sa-x-iast .
+
+sc:WDN32_EN a :Work ;
+	skos:prefLabel "The Āṭānāṭiya Protection "@en ;
+	:langScript bdr:En ;
+	rdfs:seeAlso <https://suttacentral.net/dn32/en/sujato> ;
+    :workTitle  [ a             :WorkBibliographicalTitle ;
+            rdfs:label    "The Āṭānāṭiya Protection "@en
+          ] ;
+	:workExpressionOf sc:WDN32 ;
+	:workCreatorTranslator sc:P003 ;
+	:note [:noteText "other choices could be to have it as an expression of sc:WA001, or also to have an abstract text for this translation" ] .
+
+sc:P002 a :Person ;
+	skos:prefLabel "Dharmadeva"@sa-x-iast , "法天"@zh-hant ;
+	rdfs:seeAlso <https://dazangthings.nz/cbc/person/80/> .
+
+sc:WAT1245 a :Work ;
+	:workType bdr:WorkTypeAbstractWork ;
+	skos:prefLabel "毘沙門天王"@zh-hant ;
+	:langScript bdr:Zh ;
+	rdfs:seeAlso <https://suttacentral.net/t1245> ;
+    :workTitle  [ a             :WorkBibliographicalTitle ;
+            rdfs:label    "毘沙門天王"@zh-hant
+          ] ;
+	:workExpressionOf sc:WA001 ;
+	:workCreatorTranslator sc:P002 ;
+	:note [:noteText "abstract work of the Chinese translation" ] ;
+	:note [:noteText "This would also have item, volume, etc. corresponding to https://suttacentral.net/t1245/lzh/taisho" ] .
+
+sc:WT1245 a :Work ;
+	skos:prefLabel "毘沙門天王"@zh-hant ;
+	:langScript bdr:Zh ;
+	rdfs:seeAlso <https://suttacentral.net/t1245/lzh/taisho> ;
+    :workTitle  [ a             :WorkBibliographicalTitle ;
+            rdfs:label    "毘沙門天王"@zh-hant
+          ] ;
+	:workExpressionOf sc:WAT1245 ;
+	:workCreatorTranslator sc:P0020 ;
+	:note [:noteText "Suttacentral's version of the Chinese translation" ] ;
+	:note [:noteText "This would also have item, volume, etc. corresponding to https://suttacentral.net/t1245/lzh/taisho, other similar expressions of the Chinese translation could be recorded, from other versions of the Canon" ] .
+
+sc:P004 a :Person ;
+	skos:prefLabel "HOERNLE, A. F. Rudolf" ;
+	owl:sameAs <https://viaf.org/viaf/14837838> .
+
+sc:WSF a :Work ;
+	skos:prefLabel "Manuscript remains of Buddhist literature found in eastern Turkestan : facsimiles with transcripts, translations and notes"@en ;
+	rdfs:seeAlso <https://archive.org/details/cu31924023185584> ;
+	owl:sameAs <http://www.worldcat.org/oclc/28663779> ;
+	:workHasPart sc:WSF71 .
+
+sc:WSF71 a :Work ;
+	rdfs:seeAlso <https://suttacentral.net/sf71> ;
+	:workExpressionOf sc:WA001 ;
+	:workPartOf sc:WSF .
+
