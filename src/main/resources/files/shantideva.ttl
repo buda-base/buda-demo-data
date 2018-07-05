@@ -28,13 +28,13 @@
 
 
 bdr:P6161 :sameAsVIAF viaf:23444930 ;
-   :sameAs viaf:23444930 ;
+   owl:sameAs viaf:23444930 ;
    rdfs:seeAlso <http://zhishi.me/baidubaike/resource/%E5%AF%82%E5%A4%A9> ;
-   :sameAs wd:Q445460 ;
+   owl:sameAs wd:Q445460 ;
    rdfs:seeAlso <https://baike.baidu.com/item/%E5%AF%82%E5%A4%A9> ;
    rdfs:seeAlso <http://www.rigpawiki.org/index.php?title=Shantideva> ;
    rdfs:seeAlso <https://www.himalayanart.org/search/set.cfm?setID=661> ;
-   :sameAs <https://openlibrary.org/authors/OL2985185A> .
+   owl:sameAs <https://openlibrary.org/authors/OL2985185A> .
 
 
 viaf:23444930

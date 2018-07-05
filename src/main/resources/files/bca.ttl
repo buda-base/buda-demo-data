@@ -24,10 +24,11 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
 
-
 bdr:W3CN1560 :workExpressionOf bdr:W0RTT3216 .
 bdr:W21971 :workExpressionOf bdr:W0RTT3216 .
 bdr:W1EE17 :workExpressionOf bdr:WMNBCA .
+
+bdr:W1KG8889 :workExpressionOf bdr:W0RTT3169 .
 
 bdr:W19740 :workHasExpression bdr:WZHBCA , bdr:WMNBCA , bdr:WGR_BCA_1 , bdr:WGR_BCA_2 .
    
