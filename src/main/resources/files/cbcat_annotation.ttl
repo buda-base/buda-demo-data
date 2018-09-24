@@ -1,6 +1,9 @@
 @prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdan:  <http://purl.bdrc.io/annotation/> .
+@prefix bdac:  <http://purl.bdrc.io/anncollection/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
@@ -53,7 +56,8 @@ bdr:ASWCBCST_001 a adm:Assertion ;
 	rdfs:comment "On the basis of a large set of diverse stylistic markers, Radich argues that the Ekottarikāgama T125 was translated by Zhu Fonian, and not by Saṃghadeva, as the received ascription would have it. He also considers implications of his findings for the broader corpus of texts ascribed to Zhu Fonian. Radich presents a total of 137 markers which never appear in the Madhyamāgama T26, the benchmark text for Saṃghadeva, but occur a total of over 6,200 times in the Ekottarikāgama, and approx. 15,520 times further in the core Zhu Fonian corpus (DĀ T1, T212, T656, T1428 and T1464). In combination with the external evidence, Radich claims, this internal evidence provides extremely strong support for Zhu Fonian’s translatorship (or perhaps partial authorship) of the text. Radich's study is intended to work in concert with Radich and Anālayo (2017), which presents further evidence in support of the same reascription."@en ;
 	:workLocation [ :workLocationWork bdr:WCBCSR ] .
 
-bdr:ANWCBC2237_AN001 a oa:Annotation ;
+bdan:ANWCBC2237_AN001 a oa:Annotation ;
+	:annInLayer bdac:ANCWCBC2237_C001 ;
 	oa:hasTarget [ a rdf:Statement ;
 		rdf:subject bdr:WCBC2237 ;
 		rdf:predicate :creatorTranslator ;
@@ -68,7 +72,8 @@ bdr:ANWCBC2237_AN001 a oa:Annotation ;
 		adm:statementScore 1 ;
 	] .
 
-bdr:ANWCBC2237_AN002 a oa:Annotation ;
+bdan:ANWCBC2237_AN002 a oa:Annotation ;
+	:annInLayer bdac:ANCWCBC2237_C001 ;
 	oa:hasTarget [
 		a rdf:Statement ;
 		rdf:subject bdr:WCBC2237 ;
@@ -82,3 +87,7 @@ bdr:ANWCBC2237_AN002 a oa:Annotation ;
 		] ;
 		adm:statementScore -1 ;
 	] .
+
+bdac:ANCWCBC2237_C001 a bdo:AnnotationLayer ;
+	rdfs:label "CBC@ annotations"@en ;
+	:layerForResource bdr:WCBC2237 .
