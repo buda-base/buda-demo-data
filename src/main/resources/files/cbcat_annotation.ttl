@@ -91,3 +91,7 @@ bdan:ANWCBC2237_AN002 a oa:Annotation ;
 bdac:ANCWCBC2237_C001 a bdo:AnnotationLayer ;
 	rdfs:label "CBC@ annotations"@en ;
 	:layerForResource bdr:WCBC2237 .
+
+bdac:ANCWCBC2237_C002 a bdo:AnnotationLayer ;
+	rdfs:label "Test annotations layer"@en ;
+	:layerForResource bdr:WCBC2237 .
