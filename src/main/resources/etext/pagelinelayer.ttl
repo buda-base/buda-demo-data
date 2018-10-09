@@ -1,0 +1,325 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix bdo:      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix tbr:   <http://purl.bdrc.io/ontology/toberemoved/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rkts:    <http://purl.rkts.eu/resource/> .
+@prefix viaf:    <http://viaf.org/viaf/> .
+@prefix wcat:    <http://www.worldcat.org/oclc/> .
+@prefix wde:     <http://www.wikidata.org/entity/> .
+@prefix tol:     <http://api.treasuryoflives.org/resource/> .
+@prefix schema: <http://schema.org/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix umbel: <http://umbel.org/umbel#> .
+@prefix re:    <http://oclcsrw.google.code/redirect> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rdagr2: <http://rdvocab.info/ElementsGr2/> .
+@prefix bio: <http://purl.org/vocab/bio/0.1/> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix oa:    <http://www.w3.org/ns/oa#> .
+@prefix as:    <http://www.w3.org/ns/activitystreams#> .
+@prefix bdac:    <http://purl.bdrc.io/anncollection/> .
+@prefix bdan:    <http://purl.bdrc.io/annotation/> .
+
+bdac:ANCUTDEMO_V01_001 a bdo:AnnotationLayer ;
+	rdfs:label "Page mapping information for bdr:UTDEMO_01"@en ;
+	:layerType bdr:LayerPageMapping ;
+	:layerForResource bdr:UTDEMO_01 .
+
+bdan:ANUTDEMO_V01_001_0001 a oa:Annotation ;
+	:annInLayer bdac:ANCUTDEMO_V01_001 ;
+	oa:hasTarget [
+		a :WorkLocation ;
+		:workLocationVolume 1 ;
+        :workLocationChar 1 ;
+        :workLocationEndChar 69 ;
+        :workLocationWork bdr:WUTDEMO 
+	] ;
+    oa:motivatedBy :PageMapping ;
+	oa:hasBody [
+		a :WorkLocation ;
+		:workLocationVolume 1 ;
+        :workLocationPage 3 ;
+        :workLocationWork bdr:W22084 , bdr:W4CZ5369 , bdr:W30532
+	] , [
+		a :WorkLocation ;
+		:workLocationVolume 1 ;
+        :workLocationPage 1 ;
+        :workLocationPageName "1a" ;
+        :workLocationWork bdr:WUTDEMO
+	] .
+
+bdan:ANUTDEMO_V01_001_0002 a oa:Annotation ;
+	:annInLayer bdac:ANCUTDEMO_V01_001 ;
+	oa:hasTarget [
+		a :WorkLocation ;
+		:workLocationVolume 1 ;
+        :workLocationChar 27 ;
+        :workLocationEndChar 675 ;
+        :workLocationWork bdr:WUTDEMO 
+	] ;
+    oa:motivatedBy :PageMapping ;
+	oa:hasBody [
+		a :WorkLocation ;
+		:workLocationVolume 1 ;
+        :workLocationPage 4 ;
+        :workLocationWork bdr:W22084 , bdr:W4CZ5369 , bdr:W30532
+	] , [
+		a :WorkLocation ;
+		:workLocationVolume 1 ;
+        :workLocationPage 2 ;
+        :workLocationPageName "1b" ;
+        :workLocationWork bdr:WUTDEMO
+	] .
+
+bdan:ANUTDEMO_V01_001_0003 a oa:Annotation ;
+	:annInLayer bdac:ANCUTDEMO_V01_001 ;
+	oa:hasTarget [
+		a :WorkLocation ;
+		:workLocationVolume 1 ;
+        :workLocationChar 676 ;
+        :workLocationEndChar 1847 ;
+        :workLocationWork bdr:WUTDEMO 
+	] ;
+    oa:motivatedBy :PageMapping ;
+	oa:hasBody [
+		a :WorkLocation ;
+		:workLocationVolume 1 ;
+        :workLocationPage 5 ;
+        :workLocationWork bdr:W22084 , bdr:W4CZ5369 , bdr:W30532
+	] , [
+		a :WorkLocation ;
+		:workLocationVolume 1 ;
+        :workLocationPage 3 ;
+        :workLocationPageName "2a" ;
+        :workLocationWork bdr:WUTDEMO
+	] .
+
+bdac:ANCUTDEMO_V01_002 a bdo:AnnotationLayer ;
+	rdfs:label "Line informations for bdr:UTDEMO_01"@en ;
+	:layerType bdr:LayerLineMapping ;
+	:layerForResource bdr:UTDEMO_01 .
+
+bdan:ANUTDEMO_V01_002_0001 a oa:Annotation ;
+	:annInLayer bdac:ANCUTDEMO_V01_002 ;
+	oa:hasTarget [
+		a :WorkLocation ;
+		:workLocationVolume 1 ;
+        :workLocationChar 1 ;
+        :workLocationEndChar 26 ;
+        :workLocationWork bdr:WUTDEMO 
+	] ;
+    oa:motivatedBy :LineMapping ;
+	oa:hasBody [
+		a :WorkLocation ;
+		:workLocationVolume 1 ;
+        :workLocationPage 1 ;
+        :workLocationLine 1 ;
+        :workLocationWork bdr:WUTDEMO
+	] .
+
+bdan:ANUTDEMO_V01_002_0002 a oa:Annotation ;
+	:annInLayer bdac:ANCUTDEMO_V01_002 ;
+	oa:hasTarget [
+		a :WorkLocation ;
+		:workLocationVolume 1 ;
+        :workLocationChar 26 ;
+        :workLocationEndChar 93 ;
+        :workLocationWork bdr:WUTDEMO 
+	] ;
+    oa:motivatedBy :LineMapping ;
+	oa:hasBody [
+		a :WorkLocation ;
+		:workLocationVolume 1 ;
+        :workLocationPage 2 ;
+        :workLocationLine 1 ;
+        :workLocationWork bdr:WUTDEMO
+	] .
+
+bdan:ANUTDEMO_V01_002_0003 a oa:Annotation ;
+	:annInLayer bdac:ANCUTDEMO_V01_002 ;
+	oa:hasTarget [
+		a :WorkLocation ;
+		:workLocationVolume 1 ;
+        :workLocationChar 94 ;
+        :workLocationEndChar 269 ;
+        :workLocationWork bdr:WUTDEMO 
+	] ;
+    oa:motivatedBy :LineMapping ;
+	oa:hasBody [
+		a :WorkLocation ;
+		:workLocationVolume 1 ;
+        :workLocationPage 2 ;
+        :workLocationLine 2 ;
+        :workLocationWork bdr:WUTDEMO
+	] .
+
+bdan:ANUTDEMO_V01_002_0004 a oa:Annotation ;
+	:annInLayer bdac:ANCUTDEMO_V01_002 ;
+	oa:hasTarget [
+		a :WorkLocation ;
+		:workLocationVolume 1 ;
+        :workLocationChar 270 ;
+        :workLocationEndChar 405 ;
+        :workLocationWork bdr:WUTDEMO 
+	] ;
+    oa:motivatedBy :LineMapping ;
+	oa:hasBody [
+		a :WorkLocation ;
+		:workLocationVolume 1 ;
+        :workLocationPage 2 ;
+        :workLocationLine 3 ;
+        :workLocationWork bdr:WUTDEMO
+	] .
+
+bdan:ANUTDEMO_V01_002_0005 a oa:Annotation ;
+	:annInLayer bdac:ANCUTDEMO_V01_002 ;
+	oa:hasTarget [
+		a :WorkLocation ;
+		:workLocationVolume 1 ;
+        :workLocationChar 406 ;
+        :workLocationEndChar 541 ;
+        :workLocationWork bdr:WUTDEMO 
+	] ;
+    oa:motivatedBy :LineMapping ;
+	oa:hasBody [
+		a :WorkLocation ;
+		:workLocationVolume 1 ;
+        :workLocationPage 2 ;
+        :workLocationLine 4 ;
+        :workLocationWork bdr:WUTDEMO
+	] .
+
+bdan:ANUTDEMO_V01_002_0006 a oa:Annotation ;
+	:annInLayer bdac:ANCUTDEMO_V01_002 ;
+	oa:hasTarget [
+		a :WorkLocation ;
+		:workLocationVolume 1 ;
+        :workLocationChar 542 ;
+        :workLocationEndChar 675 ;
+        :workLocationWork bdr:WUTDEMO 
+	] ;
+    oa:motivatedBy :LineMapping ;
+	oa:hasBody [
+		a :WorkLocation ;
+		:workLocationVolume 1 ;
+        :workLocationPage 2 ;
+        :workLocationLine 5 ;
+        :workLocationWork bdr:WUTDEMO
+	] .
+
+bdan:ANUTDEMO_V01_002_0007 a oa:Annotation ;
+	:annInLayer bdac:ANCUTDEMO_V01_002 ;
+	oa:hasTarget [
+		a :WorkLocation ;
+		:workLocationVolume 1 ;
+        :workLocationChar 676 ;
+        :workLocationEndChar 854 ;
+        :workLocationWork bdr:WUTDEMO 
+	] ;
+    oa:motivatedBy :LineMapping ;
+	oa:hasBody [
+		a :WorkLocation ;
+		:workLocationVolume 1 ;
+        :workLocationPage 3 ;
+        :workLocationLine 1 ;
+        :workLocationWork bdr:WUTDEMO
+	] .
+
+bdan:ANUTDEMO_V01_002_0008 a oa:Annotation ;
+	:annInLayer bdac:ANCUTDEMO_V01_002 ;
+	oa:hasTarget [
+		a :WorkLocation ;
+		:workLocationVolume 1 ;
+        :workLocationChar 855 ;
+        :workLocationEndChar 1045 ;
+        :workLocationWork bdr:WUTDEMO 
+	] ;
+    oa:motivatedBy :LineMapping ;
+	oa:hasBody [
+		a :WorkLocation ;
+		:workLocationVolume 1 ;
+        :workLocationPage 3 ;
+        :workLocationLine 2 ;
+        :workLocationWork bdr:WUTDEMO
+	] .
+
+bdan:ANUTDEMO_V01_002_0009 a oa:Annotation ;
+	:annInLayer bdac:ANCUTDEMO_V01_002 ;
+	oa:hasTarget [
+		a :WorkLocation ;
+		:workLocationVolume 1 ;
+        :workLocationChar 1046 ;
+        :workLocationEndChar 1259 ;
+        :workLocationWork bdr:WUTDEMO 
+	] ;
+    oa:motivatedBy :LineMapping ;
+	oa:hasBody [
+		a :WorkLocation ;
+		:workLocationVolume 1 ;
+        :workLocationPage 3 ;
+        :workLocationLine 3 ;
+        :workLocationWork bdr:WUTDEMO
+	] .
+
+bdan:ANUTDEMO_V01_002_0010 a oa:Annotation ;
+	:annInLayer bdac:ANCUTDEMO_V01_002 ;
+	oa:hasTarget [
+		a :WorkLocation ;
+		:workLocationVolume 1 ;
+        :workLocationChar 1260 ;
+        :workLocationEndChar 1467 ;
+        :workLocationWork bdr:WUTDEMO 
+	] ;
+    oa:motivatedBy :LineMapping ;
+	oa:hasBody [
+		a :WorkLocation ;
+		:workLocationVolume 1 ;
+        :workLocationPage 3 ;
+        :workLocationLine 4 ;
+        :workLocationWork bdr:WUTDEMO
+	] .
+
+bdan:ANUTDEMO_V01_002_0011 a oa:Annotation ;
+	:annInLayer bdac:ANCUTDEMO_V01_002 ;
+	oa:hasTarget [
+		a :WorkLocation ;
+		:workLocationVolume 1 ;
+        :workLocationChar 1468 ;
+        :workLocationEndChar 1651 ;
+        :workLocationWork bdr:WUTDEMO 
+	] ;
+    oa:motivatedBy :LineMapping ;
+	oa:hasBody [
+		a :WorkLocation ;
+		:workLocationVolume 1 ;
+        :workLocationPage 3 ;
+        :workLocationLine 5 ;
+        :workLocationWork bdr:WUTDEMO
+	] .
+
+bdan:ANUTDEMO_V01_002_0012 a oa:Annotation ;
+	:annInLayer bdac:ANCUTDEMO_V01_002 ;
+	oa:hasTarget [
+		a :WorkLocation ;
+		:workLocationVolume 1 ;
+        :workLocationChar 1652 ;
+        :workLocationEndChar 1847 ;
+        :workLocationWork bdr:WUTDEMO 
+	] ;
+    oa:motivatedBy :LineMapping ;
+	oa:hasBody [
+		a :WorkLocation ;
+		:workLocationVolume 1 ;
+        :workLocationPage 3 ;
+        :workLocationLine 6 ;
+        :workLocationWork bdr:WUTDEMO
+	] .

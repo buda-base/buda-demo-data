@@ -34,6 +34,7 @@ bdr:WCBC2237 a :Work ;
                     rdfs:label    "增壹阿含經"@zh-hant
                   ] ;
     :originalRecord "https://dazangthings.nz/cbc/text/2237/"^^xsd:anyURI ;
+    rdfs:seeAlso "http://cbetaonline.dila.edu.tw/en/T0125"^^xsd:anyURI ;
     :workRefTaisho "T0125" ;
     :creatorTranslator bdr:PCBC47 , bdr:PCBC7 .
 

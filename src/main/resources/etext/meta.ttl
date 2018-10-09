@@ -1,0 +1,136 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix tbr:   <http://purl.bdrc.io/ontology/toberemoved/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rkts:    <http://purl.rkts.eu/resource/> .
+@prefix viaf:    <http://viaf.org/viaf/> .
+@prefix wcat:    <http://www.worldcat.org/oclc/> .
+@prefix wde:     <http://www.wikidata.org/entity/> .
+@prefix tol:     <http://api.treasuryoflives.org/resource/> .
+@prefix schema: <http://schema.org/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix umbel: <http://umbel.org/umbel#> .
+@prefix re:    <http://oclcsrw.google.code/redirect> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rdagr2: <http://rdvocab.info/ElementsGr2/> .
+@prefix bio: <http://purl.org/vocab/bio/0.1/> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+
+bdr:UTDEMO a            :Etext ;
+    skos:prefLabel      "eKangyur : Derge Kangyur"@en ;
+    :workHasParts       bdr:WUTDEMO_TOH0001 ;
+    adm:status          bdr:StatusReleased .
+
+bdr:IUTDEMO a            :Item , :ItemEtext ;
+    skos:prefLabel       "eKangyur : Derge Kangyur"@en ;
+    :itemEtextForWork    bdr:WUTDEMO ;
+    :itemHasVolume       bdr:VUTDEMO_001 .
+
+bdr:VUTDEMO_001 a        :VolumeEtextAsset , :Volume ;
+    skos:prefLabel       "eKangyur : Volume 1"@en ;
+    :volumeOf            bdr:IUTDEMO ;
+    :volumeType         bdr:PhysicalVolume ;
+    :volumeNumber       1 ;
+    :volumeHasEtext      bdr:UTDEMO_01 .
+
+bdr:WUTDEMO a            :Work ;
+	skos:prefLabel       "eKangyur : Derge Kangyur"@en ;
+	:workEditionBasedOn  bdr:W22084 , bdr:W4CZ5369 , bdr:W30532 ;
+    adm:status          bdr:StatusReleased ;
+    :workHasItemEtext    bdr:IUTDEMO .
+
+bdr:WUTDEMO_TOH0001 a :Work ;
+    skos:prefLabel "Vinayavastu"@en , "'dul ba bzhi/"@bo-x-ewts ;
+    :workExpressionOf bdr:W0RKT0001 ;
+    :workLocation [
+                :workLocationVolume 1 ;
+                :workLocationChar 1 ;
+                :workLocationEndChar 1171 ;
+                :workLocationWork bdr:WUTDEMO 
+            ] .
+
+bdr:UTDEMO_01 a         :Etext ;
+    skos:prefLabel      "pod 1 'dul ba ka/"@bo-x-ewts , "Vinaya, Volume 1"@en ;
+    :etextForImageVolume     bdr:V22084_I0886 , bdr:V4CZ5369_I1KG9127 , bdr:V30532_I6348 ;
+    adm:status          bdr:StatusReleased ;
+    :eTextHasChunk  [ :chunkContents  "༄༅། །འདུལ་བ་ཀ་བཞུགས་སོ། །"@bo ;
+                      :seqNum          1 ;
+                      :sliceEndChar    26 ;
+                      :sliceStartChar  1 ;
+                    ] , [ :chunkContents  "༄༅༅། །རྒྱ་གར་སྐད་དུ། བི་ན་ཡ་བསྟུ། བོད་སྐད་དུ། འདུལ་བ་གཞི། བམ་པོ་དང་པོ། དཀོན་མཆོག་གསུམ་ལ་ཕྱག་འཚལ་ལོ། །གང་གིས་འཆིང་རྣམས་ཡང་དག་རབ་བཅད་ཅིང་། །"@bo ;
+                      :seqNum          2 ;
+                      :sliceEndChar    165 ;
+                      :sliceStartChar  27 ;
+                    ] , [ :chunkContents  "མུ་སྟེགས་ཚོགས་རྣམས་ཐམས་ཅད་རབ་བཅོམ་སྟེ། །སྡེ་དང་བཅས་པའི་བདུད་རྣམས་ངེས་བཅོམ་ནས། །བྱང་ཆུབ་འདི་བརྙེས་དེ་ལ་ཕྱག་འཚལ་ལོ། །"@bo ;
+                      :seqNum          3 ;
+                      :sliceEndChar    281 ;
+                      :sliceStartChar  166 ;
+                    ] , [ :chunkContents  "ཁྱིམ་དོན་ཆེ་ཆུང་སྤངས་ཏེ་དང་པོར་རབ་འབྱུང་དཀའ། །རབ་བྱུང་ཐོབ་ནས་ཡུལ་སྤྱད་དག་གིས་དགའ་ཐོབ་དཀའ། །མངོན་དགའ་ཇི་བཞིན་དོན་བསྐྱེད་ཡང་དག་བྱེད་པ་དཀའ། །"@bo ;
+                      :seqNum          4 ;
+                      :sliceEndChar    420 ;
+                      :sliceStartChar  282 ;
+                    ] , [ :chunkContents  "ངུར་སྨྲིག་གོས་འཆང་མཁས་པ་ཚུལ་ལས་ཉམས་པ་དཀའ། །གཞི་རྣམས་ཀྱི་སྤྱི་སྡོམ་ལ། རབ་འབྱུང་གསོ་སྦྱོང་གཞི་དང་ནི། །དགག་དབྱེ་དབྱར་དང་ཀོ་ལྤགས་གཞི། །"@bo ;
+                      :seqNum          5 ;
+                      :sliceEndChar    551 ;
+                      :sliceStartChar  421 ;
+                    ] , [ :chunkContents  "སྨན་དང་གོས་དང་སྲ་བརྐྱང་དང་། །ཀཽ་ཤཱམ་བཱི་དང་ལས་ཀྱི་གཞི། །དམར་སེར་ཅན་དང་གང་ཟག་དང་། །སྤོ་དང་གསོ་སྦྱོང་བཞག་པ་དང་། །"@bo ;
+                      :seqNum          6 ;
+                      :sliceEndChar    662 ;
+                      :sliceStartChar  552 ;
+                    ] , [ :chunkContents  "གནས་མལ་དང་ནི་རྩོད་པ་དང་། །དགེ་འདུན་དབྱེན་རྣམས་བསྡུས་པ་ཡིན། །རབ་ཏུ་འབྱུང་བའི་གཞིའི་སྤྱི་སྡོམ་ལ། ཤཱ་རིའི་བུ་དང་མུ་སྟེགས་ཅན། །"@bo ;
+                      :seqNum          7 ;
+                      :sliceEndChar    785 ;
+                      :sliceStartChar  663 ;
+                    ] , [ :chunkContents  "དགེ་ཚུལ་གཉིས་དང་བྱ་རོག་སྐྲོད། །དགྲ་བཅོམ་བསད་དང་ལག་རྡུམ་གྱི། །སྡེ་ཚན་ཡང་དག་བསྡུས་པ་ཡིན། །སྡོམ་ལ། ཤཱ་རིའི་བུ་དང་རབ་འབྱུང་དང་། །"@bo ;
+                      :seqNum          8 ;
+                      :sliceEndChar    910 ;
+                      :sliceStartChar  786 ;
+                    ] , [ :chunkContents  "བསྙེན་པར་རྫོགས་པར་གནང་བ་དང་། །ཉེ་སྡེས་ཚོགས་ནི་བསྡུས་པ་དང་། །ལྔ་པའི་སྡེ་ཚན་བསྡུས་པ་ཡིན། །བྱང་ཆུབ་སེམས་དཔའ་དགའ་ལྡན་གྱི་གནས་ན་བཞུགས་པ་ན། "@bo ;
+                      :seqNum          9 ;
+                      :sliceEndChar    1045 ;
+                      :sliceStartChar  911 ;
+                    ] , [ :chunkContents  "ཡུལ་ཨང་ག་དག་ན་ཨང་གའི་རྒྱལ་པོ་ཞེས་བྱ་བས་རྒྱལ་སྲིད་འབྱོར་པ། "@bo ;
+                      :seqNum          10 ;
+                      :sliceEndChar    1104 ;
+                      :sliceStartChar  1046 ;
+                    ] , [ :chunkContents  "རྒྱས་པ་བདེ་བ་ལོ་ལེགས་པ་སྐྱེ་བོ་དང་མི་མང་པོས་གང་བ་བྱེད་དུ་བཅུག་གོ། །"@bo ;
+                      :seqNum          11 ;
+                      :sliceEndChar    1171 ;
+                      :sliceStartChar  1105 ;
+                    ] , [ :chunkContents  "ཡུལ་མ་ག་དྷཱ་དག་ན་ཡང་རྒྱལ་པོ་པད་མ་ཆེན་པོ་ཞེས་བྱ་བས། "@bo ;
+                      :seqNum          12 ;
+                      :sliceEndChar    1223 ;
+                      :sliceStartChar  1172 ;
+                    ] , [ :chunkContents  "རྒྱལ་སྲིད་འབྱོར་པ་རྒྱས་པ་བདེ་བ་ལོ་ལེགས་པ་སྐྱེ་བོ་དང་མི་མང་པོས་གང་བ་བྱེད་དུ་བཅུག་གོ། །"@bo ;
+                      :seqNum          13 ;
+                      :sliceEndChar    1309 ;
+                      :sliceStartChar  1224 ;
+                    ] , [ :chunkContents  "རེས་འགའ་ནི་ཨང་གའི་རྒྱལ་པོ་དཔུང་དང་མཐུ་ཆེ་བ་ཡིན་ལ། རེས་འགའ་ནི་རྒྱལ་པོ་པད་མ་ཆེན་པོ་དཔུང་དང་མཐུ་ཆེ་བ་ཡིན་ནོ། །"@bo ;
+                      :seqNum          14 ;
+                      :sliceEndChar    1416 ;
+                      :sliceStartChar  1310 ;
+                    ] , [ :chunkContents  "གང་གི་ཚེ་ཨང་གའི་རྒྱལ་པོ་དཔུང་དང་མཐུ་ཆེ་བ་དེའི་ཚེ་ན། དེས་དཔུང་གི་ཚོགས་ཡན་ལག་བཞི་པ། གླང་པོ་ཆེ་པའི་ཚོགས་དང་། རྟ་པའི་ཚོགས་དང་། ཤིང་རྟ་པའི་ཚོགས་དང་། "@bo ;
+                      :seqNum          15 ;
+                      :sliceEndChar    1560 ;
+                      :sliceStartChar  1417 ;
+                    ] , [ :chunkContents  "དཔུང་བུ་ཆུང་གི་ཚོགས་གོ་བསྐོན་ཏེ། ཡུལ་མ་ག་དྷཱ་རྒྱལ་པོའི་ཁབ་མ་གཏོགས་པ་བཅོམ་ནས་ཕྱིར་ལྡོག་པར་བྱེད་དོ། །"@bo ;
+                      :seqNum          16 ;
+                      :sliceEndChar    1660 ;
+                      :sliceStartChar  1561 ;
+                    ] , [ :chunkContents  "གང་གི་ཚེ་རྒྱལ་པོ་པད་མ་ཆེན་པོ་དཔུང་དང་མཐུ་ཆེ་བ་དེའི་ཚེ་ན། དེས་ཀྱང་དཔུང་གི་ཚོགས་ཡན་ལག་བཞི་པ། "@bo ;
+                      :seqNum          17 ;
+                      :sliceEndChar    1752 ;
+                      :sliceStartChar  1661 ;
+                    ] , [ :chunkContents  "གླང་པོ་ཆེ་པའི་ཚོགས་དང་། རྟ་པའི་ཚོགས་དང་། ཤིང་རྟ་པའི་ཚོགས་དང་། དཔུང་བུ་ཆུང་གི་ཚོགས་གོ་བསྐོན་ཏེ།"@bo ;
+                      :seqNum          18 ;
+                      :sliceEndChar    1847 ;
+                      :sliceStartChar  1753 ;
+                    ] .

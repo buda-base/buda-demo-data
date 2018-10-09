@@ -1,0 +1,106 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix bdo:      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix tbr:   <http://purl.bdrc.io/ontology/toberemoved/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rkts:    <http://purl.rkts.eu/resource/> .
+@prefix viaf:    <http://viaf.org/viaf/> .
+@prefix wcat:    <http://www.worldcat.org/oclc/> .
+@prefix wde:     <http://www.wikidata.org/entity/> .
+@prefix tol:     <http://api.treasuryoflives.org/resource/> .
+@prefix schema: <http://schema.org/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix umbel: <http://umbel.org/umbel#> .
+@prefix re:    <http://oclcsrw.google.code/redirect> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rdagr2: <http://rdvocab.info/ElementsGr2/> .
+@prefix bio: <http://purl.org/vocab/bio/0.1/> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix oa:    <http://www.w3.org/ns/oa#> .
+@prefix as:    <http://www.w3.org/ns/activitystreams#> .
+@prefix bdac:    <http://purl.bdrc.io/anncollection/> .
+@prefix bdan:    <http://purl.bdrc.io/annotation/> .
+
+bdac:ANCUTDEMO_NER001 a bdo:AnnotationLayer ;
+	rdfs:label "NER annotations for bdr:UTDEMO_01"@en ;
+	:layerType bdr:LayerNER ;
+	:layerForResource bdr:UTDEMO_01 .
+
+bdan:ANUTDEMO_NER001_001 a oa:Annotation ;
+	:annInLayer bdac:ANCUTDEMO_NER001 ;
+	oa:hasTarget [
+		a :WorkLocation ;
+		:workLocationVolume 1 ;
+        :workLocationChar 58 ;
+        :workLocationEndChar 69 ;
+        :workLocationWork bdr:WUTDEMO 
+	] ;
+    oa:motivatedBy oa:identifying ;
+	oa:hasBody bdr:W4CZ16824 .
+
+bdan:ANUTDEMO_NER001_002 a oa:Annotation ;
+	:annInLayer bdac:ANCUTDEMO_NER001 ;
+	oa:hasTarget [
+		a :WorkLocation ;
+		:workLocationVolume 1 ;
+        :workLocationChar 581 ;
+        :workLocationEndChar 591 ;
+        :workLocationWork bdr:WUTDEMO 
+	] ;
+    oa:motivatedBy oa:identifying ;
+	oa:hasBody bdr:GDEMO001 .
+
+bdr:GDEMO001 a :Place ;
+	skos:prefLabel "kauśhambhi"@sa-x-iast ;
+	skos:altLabel "ཀཽ་ཤཱམ་བཱི།"@bo , "ཀཽ་ཤམབྷི"@bo .
+
+
+bdan:ANUTDEMO_NER001_003 a oa:Annotation ;
+	:annInLayer bdac:ANCUTDEMO_NER001 ;
+	oa:hasTarget bdan:ANUTDEMO_NER001_002 ;
+    oa:motivatedBy oa:questioning ;
+	oa:hasBody [
+		rdfs:comment "Are we sure about that?"@en ;
+	] .
+
+bdan:ANUTDEMO_NER001_004 a oa:Annotation ;
+	:annInLayer bdac:ANCUTDEMO_NER001 ;
+	oa:hasTarget bdan:ANUTDEMO_NER001_003 ;
+    oa:motivatedBy oa:replying ;
+	oa:hasBody [
+		a oa:TextualBody ;
+		rdfs:comment "Well, yeah, sort of"@en ;
+	] .
+
+bdan:ANUTDEMO_NER001_004 a oa:Annotation ;
+	:annInLayer bdac:ANCUTDEMO_NER001 ;
+	oa:hasTarget bdan:ANUTDEMO_NER001_003 ;
+    oa:motivatedBy oa:replying ;
+	oa:hasBody [
+		a oa:TextualBody ;
+		rdfs:comment "Well, yeah, sort of"@en ;
+	] .
+
+bdac:ANCUTDEMO_HIG001 a bdo:AnnotationLayer ;
+	rdfs:label "User annotations for user 1"@en ;
+	:layerType bdr:LayerUser , bdr:LayerHighlight ;
+	:layerForResource bdr:UTDEMO_01 .
+
+bdan:ANUTDEMO_HIG001_001 a oa:Annotation ;
+	:annInLayer bdac:ANCUTDEMO_NER001 ;
+	oa:hasTarget [
+		a :WorkLocation ;
+		:workLocationVolume 1 ;
+        :workLocationChar 328 ;
+        :workLocationEndChar 347 ;
+        :workLocationWork bdr:WUTDEMO 
+	] ;
+    oa:motivatedBy oa:highlighting .

@@ -140,15 +140,20 @@ public class Upload {
         }
     }
     
+    static void addSubdir(final Graph g, final String dirpath) throws IOException {
+        final Stream<Path> pathStream =  Files.find(Paths.get(dirpath), 5, (p, bfa) -> bfa.isRegularFile());
+        pathStream.forEach(p -> addPathToGraph(g, p));
+        pathStream.close();
+    }
+    
     public static void main(String [] args) throws IOException {
         System.out.println("transfer files to "+FusekiBaseUrl);
         final Dataset ds = DatasetFactory.create();
         final Model m = ModelFactory.createDefaultModel();
         setPrefixes(m);
         final Graph g = m.getGraph();
-        final Stream<Path> pathStream =  Files.find(Paths.get("src/main/resources/files/"), 5, (p, bfa) -> bfa.isRegularFile());
-        pathStream.forEach(p -> addPathToGraph(g, p));
-        pathStream.close();
+        addSubdir(g, "src/main/resources/files/");
+        addSubdir(g, "src/main/resources/etext/");
         final Model infModel = ModelFactory.createInfModel(bdrcReasoner, m);
         //RDFWriter.create().source(infModel.getGraph()).lang(Lang.TTL).build().output(System.out);
         ds.addNamedModel(graphName, infModel);
