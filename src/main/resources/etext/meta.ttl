@@ -54,10 +54,11 @@ bdr:WUTDEMO_TOH0001 a :Work ;
                 :workLocationVolume 1 ;
                 :workLocationChar 1 ;
                 :workLocationEndChar 1171 ;
-                :workLocationWork bdr:WUTDEMO 
+                :workLocationWork bdr:WUTDEMO
             ] .
 
 bdr:UTDEMO_01 a         :Etext ;
+    :etextForVolume   bdr:VUTDEMO_001
     skos:prefLabel      "pod 1 'dul ba ka/"@bo-x-ewts , "Vinaya, Volume 1"@en ;
     :etextForImageVolume     bdr:V22084_I0886 , bdr:V4CZ5369_I1KG9127 , bdr:V30532_I6348 ;
     adm:status          bdr:StatusReleased ;
