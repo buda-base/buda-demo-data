@@ -95,7 +95,7 @@ bdac:ANCUTDEMO_HIG001 a bdo:AnnotationLayer ;
 	:layerForResource bdr:UTDEMO_01 .
 
 bdan:ANUTDEMO_HIG001_001 a oa:Annotation ;
-	:annInLayer bdac:ANCUTDEMO_NER001 ;
+	:annInLayer bdac:ANCUTDEMO_HIG001 ;
 	oa:hasTarget [
 		a :WorkLocation ;
 		:workLocationVolume 1 ;
