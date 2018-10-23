@@ -42,8 +42,8 @@ bdr:VUTDEMO_001 a        :VolumeEtextAsset , :Volume ;
     :volumeHasEtext      bdr:UTDEMO_01 .
 
 bdr:WUTDEMO a            :Work ;
-	skos:prefLabel       "eKangyur : Derge Kangyur"@en ;
-	:workEditionBasedOn  bdr:W22084 , bdr:W4CZ5369 , bdr:W30532 ;
+    skos:prefLabel       "eKangyur : Derge Kangyur"@en ;
+    :workEditionBasedOn  bdr:W22084 , bdr:W4CZ5369 , bdr:W30532 ;
     adm:status          bdr:StatusReleased ;
     :workHasItemEtext    bdr:IUTDEMO .
 
