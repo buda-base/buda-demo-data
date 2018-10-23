@@ -30,77 +30,68 @@
 @prefix bdan:    <http://purl.bdrc.io/annotation/> .
 
 bdac:ANCUTDEMO_NER001 a bdo:AnnotationLayer ;
-	rdfs:label "NER annotations for bdr:UTDEMO_01"@en ;
-	:layerType bdr:LayerNER ;
-	:layerForResource bdr:UTDEMO_01 .
+    rdfs:label "NER annotations for bdr:UTDEMO_01"@en ;
+    :layerType bdr:LayerNER ;
+    :layerForResource bdr:UTDEMO_01 .
 
 bdan:ANUTDEMO_NER001_001 a oa:Annotation ;
-	:annInLayer bdac:ANCUTDEMO_NER001 ;
-	oa:hasTarget [
-		a :WorkLocation ;
-		:workLocationVolume 1 ;
+    :annInLayer bdac:ANCUTDEMO_NER001 ;
+    oa:hasTarget [
+        a :WorkLocation ;
+        :workLocationVolume 1 ;
         :workLocationChar 58 ;
         :workLocationEndChar 69 ;
         :workLocationWork bdr:WUTDEMO 
-	] ;
+    ] ;
     oa:motivatedBy oa:identifying ;
-	oa:hasBody bdr:W4CZ16824 .
+    oa:hasBody bdr:W4CZ16824 .
 
 bdan:ANUTDEMO_NER001_002 a oa:Annotation ;
-	:annInLayer bdac:ANCUTDEMO_NER001 ;
-	oa:hasTarget [
-		a :WorkLocation ;
-		:workLocationVolume 1 ;
+    :annInLayer bdac:ANCUTDEMO_NER001 ;
+    oa:hasTarget [
+        a :WorkLocation ;
+        :workLocationVolume 1 ;
         :workLocationChar 581 ;
         :workLocationEndChar 591 ;
         :workLocationWork bdr:WUTDEMO 
-	] ;
+    ] ;
     oa:motivatedBy oa:identifying ;
-	oa:hasBody bdr:GDEMO001 .
+    oa:hasBody bdr:GDEMO001 .
 
 bdr:GDEMO001 a :Place ;
-	skos:prefLabel "kauśhambhi"@sa-x-iast ;
-	skos:altLabel "ཀཽ་ཤཱམ་བཱི།"@bo , "ཀཽ་ཤམབྷི"@bo .
+    skos:prefLabel "kauśhambhi"@sa-x-iast ;
+    skos:altLabel "ཀཽ་ཤཱམ་བཱི།"@bo , "ཀཽ་ཤམབྷི"@bo .
 
 
 bdan:ANUTDEMO_NER001_003 a oa:Annotation ;
-	:annInLayer bdac:ANCUTDEMO_NER001 ;
-	oa:hasTarget bdan:ANUTDEMO_NER001_002 ;
+    :annInLayer bdac:ANCUTDEMO_NER001 ;
+    oa:hasTarget bdan:ANUTDEMO_NER001_002 ;
     oa:motivatedBy oa:questioning ;
-	oa:hasBody [
-		rdfs:comment "Are we sure about that?"@en ;
-	] .
+    oa:hasBody [
+        rdfs:comment "Are we sure about that?"@en ;
+    ] .
 
 bdan:ANUTDEMO_NER001_004 a oa:Annotation ;
-	:annInLayer bdac:ANCUTDEMO_NER001 ;
-	oa:hasTarget bdan:ANUTDEMO_NER001_003 ;
+    :annInLayer bdac:ANCUTDEMO_NER001 ;
+    oa:hasTarget bdan:ANUTDEMO_NER001_003 ;
     oa:motivatedBy oa:replying ;
-	oa:hasBody [
-		a oa:TextualBody ;
-		rdfs:comment "Well, yeah, sort of"@en ;
-	] .
-
-bdan:ANUTDEMO_NER001_004 a oa:Annotation ;
-	:annInLayer bdac:ANCUTDEMO_NER001 ;
-	oa:hasTarget bdan:ANUTDEMO_NER001_003 ;
-    oa:motivatedBy oa:replying ;
-	oa:hasBody [
-		a oa:TextualBody ;
-		rdfs:comment "Well, yeah, sort of"@en ;
-	] .
+    oa:hasBody [
+        a oa:TextualBody ;
+        rdfs:comment "Well, yeah, sort of"@en ;
+    ] .
 
 bdac:ANCUTDEMO_HIG001 a bdo:AnnotationLayer ;
-	rdfs:label "User annotations for user 1"@en ;
-	:layerType bdr:LayerUser , bdr:LayerHighlight ;
-	:layerForResource bdr:UTDEMO_01 .
+    rdfs:label "User annotations for user 1"@en ;
+    :layerType bdr:LayerUser , bdr:LayerHighlight ;
+    :layerForResource bdr:UTDEMO_01 .
 
 bdan:ANUTDEMO_HIG001_001 a oa:Annotation ;
-	:annInLayer bdac:ANCUTDEMO_NER001 ;
-	oa:hasTarget [
-		a :WorkLocation ;
-		:workLocationVolume 1 ;
+    :annInLayer bdac:ANCUTDEMO_NER001 ;
+    oa:hasTarget [
+        a :WorkLocation ;
+        :workLocationVolume 1 ;
         :workLocationChar 328 ;
         :workLocationEndChar 347 ;
         :workLocationWork bdr:WUTDEMO 
-	] ;
+    ] ;
     oa:motivatedBy oa:highlighting .
