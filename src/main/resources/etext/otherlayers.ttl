@@ -39,8 +39,8 @@ bdan:ANUTDEMO_NER001_001 a oa:Annotation ;
 	oa:hasTarget [
 		a :WorkLocation ;
 		:workLocationVolume 1 ;
-        :workLocationChar 58 ;
-        :workLocationEndChar 69 ;
+        :workLocationChar 61 ;
+        :workLocationEndChar 72 ;
         :workLocationWork bdr:WUTDEMO 
 	] ;
     oa:motivatedBy oa:identifying ;
