@@ -30,296 +30,296 @@
 @prefix bdan:    <http://purl.bdrc.io/annotation/> .
 
 bdac:ANCUTDEMO_V01_001 a bdo:AnnotationLayer ;
-	rdfs:label "Page mapping information for bdr:UTDEMO_01"@en ;
-	:layerType bdr:LayerPageMapping ;
-	:layerForResource bdr:UTDEMO_01 .
+    rdfs:label "Page mapping information for bdr:UTDEMO_01"@en ;
+    :layerType bdr:LayerPageMapping ;
+    :layerForResource bdr:UTDEMO_01 .
 
 bdan:ANUTDEMO_V01_001_0001 a oa:Annotation ;
-	:annInLayer bdac:ANCUTDEMO_V01_001 ;
-	oa:hasTarget [
-		a :WorkLocation ;
-		:workLocationVolume 1 ;
+    :annInLayer bdac:ANCUTDEMO_V01_001 ;
+    oa:hasTarget [
+        a :WorkLocation ;
+        :workLocationVolume 1 ;
         :workLocationChar 1 ;
         :workLocationEndChar 69 ;
         :workLocationWork bdr:WUTDEMO 
-	] ;
+    ] ;
     oa:motivatedBy :PageMapping ;
-	oa:hasBody [
-		a :WorkLocation ;
-		:workLocationVolume 1 ;
+    oa:hasBody [
+        a :WorkLocation ;
+        :workLocationVolume 1 ;
         :workLocationPage 3 ;
         :workLocationWork bdr:W22084 , bdr:W4CZ5369 , bdr:W30532
-	] , [
-		a :WorkLocation ;
-		:workLocationVolume 1 ;
+    ] , [
+        a :WorkLocation ;
+        :workLocationVolume 1 ;
         :workLocationPage 1 ;
         :workLocationPageName "1a" ;
         :workLocationWork bdr:WUTDEMO
-	] .
+    ] .
 
 bdan:ANUTDEMO_V01_001_0002 a oa:Annotation ;
-	:annInLayer bdac:ANCUTDEMO_V01_001 ;
-	oa:hasTarget [
-		a :WorkLocation ;
-		:workLocationVolume 1 ;
+    :annInLayer bdac:ANCUTDEMO_V01_001 ;
+    oa:hasTarget [
+        a :WorkLocation ;
+        :workLocationVolume 1 ;
         :workLocationChar 27 ;
         :workLocationEndChar 675 ;
         :workLocationWork bdr:WUTDEMO 
-	] ;
+    ] ;
     oa:motivatedBy :PageMapping ;
-	oa:hasBody [
-		a :WorkLocation ;
-		:workLocationVolume 1 ;
+    oa:hasBody [
+        a :WorkLocation ;
+        :workLocationVolume 1 ;
         :workLocationPage 4 ;
         :workLocationWork bdr:W22084 , bdr:W4CZ5369 , bdr:W30532
-	] , [
-		a :WorkLocation ;
-		:workLocationVolume 1 ;
+    ] , [
+        a :WorkLocation ;
+        :workLocationVolume 1 ;
         :workLocationPage 2 ;
         :workLocationPageName "1b" ;
         :workLocationWork bdr:WUTDEMO
-	] .
+    ] .
 
 bdan:ANUTDEMO_V01_001_0003 a oa:Annotation ;
-	:annInLayer bdac:ANCUTDEMO_V01_001 ;
-	oa:hasTarget [
-		a :WorkLocation ;
-		:workLocationVolume 1 ;
+    :annInLayer bdac:ANCUTDEMO_V01_001 ;
+    oa:hasTarget [
+        a :WorkLocation ;
+        :workLocationVolume 1 ;
         :workLocationChar 676 ;
         :workLocationEndChar 1847 ;
         :workLocationWork bdr:WUTDEMO 
-	] ;
+    ] ;
     oa:motivatedBy :PageMapping ;
-	oa:hasBody [
-		a :WorkLocation ;
-		:workLocationVolume 1 ;
+    oa:hasBody [
+        a :WorkLocation ;
+        :workLocationVolume 1 ;
         :workLocationPage 5 ;
         :workLocationWork bdr:W22084 , bdr:W4CZ5369 , bdr:W30532
-	] , [
-		a :WorkLocation ;
-		:workLocationVolume 1 ;
+    ] , [
+        a :WorkLocation ;
+        :workLocationVolume 1 ;
         :workLocationPage 3 ;
         :workLocationPageName "2a" ;
         :workLocationWork bdr:WUTDEMO
-	] .
+    ] .
 
 bdac:ANCUTDEMO_V01_002 a bdo:AnnotationLayer ;
-	rdfs:label "Line informations for bdr:UTDEMO_01"@en ;
-	:layerType bdr:LayerLineMapping ;
-	:layerForResource bdr:UTDEMO_01 .
+    rdfs:label "Line informations for bdr:UTDEMO_01"@en ;
+    :layerType bdr:LayerLineMapping ;
+    :layerForResource bdr:UTDEMO_01 .
 
 bdan:ANUTDEMO_V01_002_0001 a oa:Annotation ;
-	:annInLayer bdac:ANCUTDEMO_V01_002 ;
-	oa:hasTarget [
-		a :WorkLocation ;
-		:workLocationVolume 1 ;
+    :annInLayer bdac:ANCUTDEMO_V01_002 ;
+    oa:hasTarget [
+        a :WorkLocation ;
+        :workLocationVolume 1 ;
         :workLocationChar 1 ;
         :workLocationEndChar 26 ;
         :workLocationWork bdr:WUTDEMO 
-	] ;
+    ] ;
     oa:motivatedBy :LineMapping ;
-	oa:hasBody [
-		a :WorkLocation ;
-		:workLocationVolume 1 ;
+    oa:hasBody [
+        a :WorkLocation ;
+        :workLocationVolume 1 ;
         :workLocationPage 1 ;
         :workLocationLine 1 ;
         :workLocationWork bdr:WUTDEMO
-	] .
+    ] .
 
 bdan:ANUTDEMO_V01_002_0002 a oa:Annotation ;
-	:annInLayer bdac:ANCUTDEMO_V01_002 ;
-	oa:hasTarget [
-		a :WorkLocation ;
-		:workLocationVolume 1 ;
+    :annInLayer bdac:ANCUTDEMO_V01_002 ;
+    oa:hasTarget [
+        a :WorkLocation ;
+        :workLocationVolume 1 ;
         :workLocationChar 26 ;
         :workLocationEndChar 93 ;
         :workLocationWork bdr:WUTDEMO 
-	] ;
+    ] ;
     oa:motivatedBy :LineMapping ;
-	oa:hasBody [
-		a :WorkLocation ;
-		:workLocationVolume 1 ;
+    oa:hasBody [
+        a :WorkLocation ;
+        :workLocationVolume 1 ;
         :workLocationPage 2 ;
         :workLocationLine 1 ;
         :workLocationWork bdr:WUTDEMO
-	] .
+    ] .
 
 bdan:ANUTDEMO_V01_002_0003 a oa:Annotation ;
-	:annInLayer bdac:ANCUTDEMO_V01_002 ;
-	oa:hasTarget [
-		a :WorkLocation ;
-		:workLocationVolume 1 ;
+    :annInLayer bdac:ANCUTDEMO_V01_002 ;
+    oa:hasTarget [
+        a :WorkLocation ;
+        :workLocationVolume 1 ;
         :workLocationChar 94 ;
         :workLocationEndChar 269 ;
         :workLocationWork bdr:WUTDEMO 
-	] ;
+    ] ;
     oa:motivatedBy :LineMapping ;
-	oa:hasBody [
-		a :WorkLocation ;
-		:workLocationVolume 1 ;
+    oa:hasBody [
+        a :WorkLocation ;
+        :workLocationVolume 1 ;
         :workLocationPage 2 ;
         :workLocationLine 2 ;
         :workLocationWork bdr:WUTDEMO
-	] .
+    ] .
 
 bdan:ANUTDEMO_V01_002_0004 a oa:Annotation ;
-	:annInLayer bdac:ANCUTDEMO_V01_002 ;
-	oa:hasTarget [
-		a :WorkLocation ;
-		:workLocationVolume 1 ;
+    :annInLayer bdac:ANCUTDEMO_V01_002 ;
+    oa:hasTarget [
+        a :WorkLocation ;
+        :workLocationVolume 1 ;
         :workLocationChar 270 ;
         :workLocationEndChar 405 ;
         :workLocationWork bdr:WUTDEMO 
-	] ;
+    ] ;
     oa:motivatedBy :LineMapping ;
-	oa:hasBody [
-		a :WorkLocation ;
-		:workLocationVolume 1 ;
+    oa:hasBody [
+        a :WorkLocation ;
+        :workLocationVolume 1 ;
         :workLocationPage 2 ;
         :workLocationLine 3 ;
         :workLocationWork bdr:WUTDEMO
-	] .
+    ] .
 
 bdan:ANUTDEMO_V01_002_0005 a oa:Annotation ;
-	:annInLayer bdac:ANCUTDEMO_V01_002 ;
-	oa:hasTarget [
-		a :WorkLocation ;
-		:workLocationVolume 1 ;
+    :annInLayer bdac:ANCUTDEMO_V01_002 ;
+    oa:hasTarget [
+        a :WorkLocation ;
+        :workLocationVolume 1 ;
         :workLocationChar 406 ;
         :workLocationEndChar 541 ;
         :workLocationWork bdr:WUTDEMO 
-	] ;
+    ] ;
     oa:motivatedBy :LineMapping ;
-	oa:hasBody [
-		a :WorkLocation ;
-		:workLocationVolume 1 ;
+    oa:hasBody [
+        a :WorkLocation ;
+        :workLocationVolume 1 ;
         :workLocationPage 2 ;
         :workLocationLine 4 ;
         :workLocationWork bdr:WUTDEMO
-	] .
+    ] .
 
 bdan:ANUTDEMO_V01_002_0006 a oa:Annotation ;
-	:annInLayer bdac:ANCUTDEMO_V01_002 ;
-	oa:hasTarget [
-		a :WorkLocation ;
-		:workLocationVolume 1 ;
+    :annInLayer bdac:ANCUTDEMO_V01_002 ;
+    oa:hasTarget [
+        a :WorkLocation ;
+        :workLocationVolume 1 ;
         :workLocationChar 542 ;
         :workLocationEndChar 675 ;
         :workLocationWork bdr:WUTDEMO 
-	] ;
+    ] ;
     oa:motivatedBy :LineMapping ;
-	oa:hasBody [
-		a :WorkLocation ;
-		:workLocationVolume 1 ;
+    oa:hasBody [
+        a :WorkLocation ;
+        :workLocationVolume 1 ;
         :workLocationPage 2 ;
         :workLocationLine 5 ;
         :workLocationWork bdr:WUTDEMO
-	] .
+    ] .
 
 bdan:ANUTDEMO_V01_002_0007 a oa:Annotation ;
-	:annInLayer bdac:ANCUTDEMO_V01_002 ;
-	oa:hasTarget [
-		a :WorkLocation ;
-		:workLocationVolume 1 ;
+    :annInLayer bdac:ANCUTDEMO_V01_002 ;
+    oa:hasTarget [
+        a :WorkLocation ;
+        :workLocationVolume 1 ;
         :workLocationChar 676 ;
         :workLocationEndChar 854 ;
         :workLocationWork bdr:WUTDEMO 
-	] ;
+    ] ;
     oa:motivatedBy :LineMapping ;
-	oa:hasBody [
-		a :WorkLocation ;
-		:workLocationVolume 1 ;
+    oa:hasBody [
+        a :WorkLocation ;
+        :workLocationVolume 1 ;
         :workLocationPage 3 ;
         :workLocationLine 1 ;
         :workLocationWork bdr:WUTDEMO
-	] .
+    ] .
 
 bdan:ANUTDEMO_V01_002_0008 a oa:Annotation ;
-	:annInLayer bdac:ANCUTDEMO_V01_002 ;
-	oa:hasTarget [
-		a :WorkLocation ;
-		:workLocationVolume 1 ;
+    :annInLayer bdac:ANCUTDEMO_V01_002 ;
+    oa:hasTarget [
+        a :WorkLocation ;
+        :workLocationVolume 1 ;
         :workLocationChar 855 ;
         :workLocationEndChar 1045 ;
         :workLocationWork bdr:WUTDEMO 
-	] ;
+    ] ;
     oa:motivatedBy :LineMapping ;
-	oa:hasBody [
-		a :WorkLocation ;
-		:workLocationVolume 1 ;
+    oa:hasBody [
+        a :WorkLocation ;
+        :workLocationVolume 1 ;
         :workLocationPage 3 ;
         :workLocationLine 2 ;
         :workLocationWork bdr:WUTDEMO
-	] .
+    ] .
 
 bdan:ANUTDEMO_V01_002_0009 a oa:Annotation ;
-	:annInLayer bdac:ANCUTDEMO_V01_002 ;
-	oa:hasTarget [
-		a :WorkLocation ;
-		:workLocationVolume 1 ;
+    :annInLayer bdac:ANCUTDEMO_V01_002 ;
+    oa:hasTarget [
+        a :WorkLocation ;
+        :workLocationVolume 1 ;
         :workLocationChar 1046 ;
         :workLocationEndChar 1259 ;
         :workLocationWork bdr:WUTDEMO 
-	] ;
+    ] ;
     oa:motivatedBy :LineMapping ;
-	oa:hasBody [
-		a :WorkLocation ;
-		:workLocationVolume 1 ;
+    oa:hasBody [
+        a :WorkLocation ;
+        :workLocationVolume 1 ;
         :workLocationPage 3 ;
         :workLocationLine 3 ;
         :workLocationWork bdr:WUTDEMO
-	] .
+    ] .
 
 bdan:ANUTDEMO_V01_002_0010 a oa:Annotation ;
-	:annInLayer bdac:ANCUTDEMO_V01_002 ;
-	oa:hasTarget [
-		a :WorkLocation ;
-		:workLocationVolume 1 ;
+    :annInLayer bdac:ANCUTDEMO_V01_002 ;
+    oa:hasTarget [
+        a :WorkLocation ;
+        :workLocationVolume 1 ;
         :workLocationChar 1260 ;
         :workLocationEndChar 1467 ;
         :workLocationWork bdr:WUTDEMO 
-	] ;
+    ] ;
     oa:motivatedBy :LineMapping ;
-	oa:hasBody [
-		a :WorkLocation ;
-		:workLocationVolume 1 ;
+    oa:hasBody [
+        a :WorkLocation ;
+        :workLocationVolume 1 ;
         :workLocationPage 3 ;
         :workLocationLine 4 ;
         :workLocationWork bdr:WUTDEMO
-	] .
+    ] .
 
 bdan:ANUTDEMO_V01_002_0011 a oa:Annotation ;
-	:annInLayer bdac:ANCUTDEMO_V01_002 ;
-	oa:hasTarget [
-		a :WorkLocation ;
-		:workLocationVolume 1 ;
+    :annInLayer bdac:ANCUTDEMO_V01_002 ;
+    oa:hasTarget [
+        a :WorkLocation ;
+        :workLocationVolume 1 ;
         :workLocationChar 1468 ;
         :workLocationEndChar 1651 ;
         :workLocationWork bdr:WUTDEMO 
-	] ;
+    ] ;
     oa:motivatedBy :LineMapping ;
-	oa:hasBody [
-		a :WorkLocation ;
-		:workLocationVolume 1 ;
+    oa:hasBody [
+        a :WorkLocation ;
+        :workLocationVolume 1 ;
         :workLocationPage 3 ;
         :workLocationLine 5 ;
         :workLocationWork bdr:WUTDEMO
-	] .
+    ] .
 
 bdan:ANUTDEMO_V01_002_0012 a oa:Annotation ;
-	:annInLayer bdac:ANCUTDEMO_V01_002 ;
-	oa:hasTarget [
-		a :WorkLocation ;
-		:workLocationVolume 1 ;
+    :annInLayer bdac:ANCUTDEMO_V01_002 ;
+    oa:hasTarget [
+        a :WorkLocation ;
+        :workLocationVolume 1 ;
         :workLocationChar 1652 ;
         :workLocationEndChar 1847 ;
         :workLocationWork bdr:WUTDEMO 
-	] ;
+    ] ;
     oa:motivatedBy :LineMapping ;
-	oa:hasBody [
-		a :WorkLocation ;
-		:workLocationVolume 1 ;
+    oa:hasBody [
+        a :WorkLocation ;
+        :workLocationVolume 1 ;
         :workLocationPage 3 ;
         :workLocationLine 6 ;
         :workLocationWork bdr:WUTDEMO
-	] .
+    ] .
