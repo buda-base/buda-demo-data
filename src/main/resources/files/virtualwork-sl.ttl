@@ -1,0 +1,44 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+
+bdr:WSL001 a :VirtualWork , :Work ;
+    skos:prefLabel "Sherab Ling's collection"@en ;
+    :workHasPart bdr:WSL001_P001 , bdr:WSL001_P002 , bdr:WSL001_P003 , bdr:WSL001_P004 , bdr:WSL001_P005 .
+
+
+bdr:WSL001_P001 a :VirtualWork , :Work ;
+    skos:prefLabel "རྒྱ་ཆེན་བཀའ་མཛོད།（དཔལ་སྤུངས་པར་མ་འབྲུག་སྤ་གྲོའི་བསྐྱར་པར་མ།）"@bo ;
+    :workPartIndex 1 ;
+    :workPartOf bdr:WSL001 ;
+    :workLinkTo bdr:W21808 .
+
+bdr:WSL001_P002 a :VirtualWork , :Work ;
+    skos:prefLabel "ཐུབ་བསྟན་ཆོས་འཁོར་གླིང་གི་བཅའ་ཡིག"@bo ;
+    :workPartIndex 2 ;
+    :workPartOf bdr:WSL001 ;
+    :workLinkTo bdr:W00KG01636 .
+
+bdr:WSL001_P003 a :VirtualWork , :Work ;
+    skos:prefLabel "སྔ་འགྱུར་རྫོགས་ཆེན་ཆོས་འབྱུང་ཆེན་མོ།"@bo ;
+    :workPartIndex 3 ;
+    :workPartOf bdr:WSL001 ;
+    :workLinkTo bdr:W27401 .
+
+bdr:WSL001_P004 a :VirtualWork , :Work ;
+    skos:prefLabel "གསུང་འབུམ། མཁྱེན་བརྩེའི་དབང་པོ།"@bo ;
+    :workPartIndex 4 ;
+    :workPartOf bdr:WSL001 ;
+    :workLinkTo bdr:W21807 .
+
+bdr:WSL001_P005 a :VirtualWork , :Work ;
+    skos:prefLabel "དཀར་མཛེས་ཁུལ་གྱི་དགོན་སྡེ་སོ་སོའི་ལོ་རྒྱུས་གསལ་བར་བཤད་པ།"@bo ;
+    :workPartIndex 5 ;
+    :workPartOf bdr:WSL001 ;
+    :workLinkTo bdr:W19997 .
