@@ -106,18 +106,27 @@ bdr:VSAT_BCA a :VolumeImageAsset ;
   :hasIIIFManifest  <https://dzkimgs.l.u-tokyo.ac.jp/iiif/taisho/manifests/1662_32_manifest.json> ;
   :volumeOf  bdr:ISAT_BCA .
 
-bdr:WGR_BCA_1 a :Work ;
-  :contentProvider bdr:CPGretil ;
-  :workExpressionOf bdr:W19740 ;
-  adm:license bdr:LicenseCopyrighted ;
-  adm:access bdr:AccessOpen ;
-  :originalRecord "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/santbcpu.htm"^^xsd:anyURI ;
-  skos:prefLabel "Santideva: Bodhicaryavatara (input by Richard Mahoney)"@en .
+bdr:WIA_BCA a :Work ;
+    :contentProvider bdr:CPIA ;
+    skos:prefLabel "Bodhicaryāvatāra"@sa-x-iast ;
+    skos:prefLabel "Bodhicaryāvatāra (Hodgson Collection)"@en ;
+    adm:license bdr:PublicDomain ;
+    adm:access bdr:AccessOpen ;
+    rdfs:comment "From the Collection of the Royal Asiatic Society"@en ;
+    :workIncipit "sugatānsamutansadharmakāyān praṇipatyādarato ‘khilāṃśca vaṃdyān | sugatātmajasaṃvarāvatāraṃ kathayiṣyāmi yathāgamaṃ samāsāt || na hi kiṃcidapūrvamatra vācyaṃ na ca saṃgraṃthanakośalaṃ mamāsti | ata eva na me parārthacintā svamano bhāvayituṃ kṛtaṃ mayedaṃ"@sa-x-iast ;
+    :workMaterial  bdr:MaterialPalmLeaf ;
+    :workObjectType  bdr:ObjectTypeManuscript ;
+    :workExpressionOf bdr:W19740 ;
+    :workLangScript bdr:SaNewa ;
+    :originalRecord "https://archive.org/details/rashodgson13"^^xsd:anyURI ;
+    :workHasItemImageAsset  bdr:IIA_BCA .
 
-bdr:WGR_BCA_2 a :Work ;
-  :contentProvider bdr:CPGretil ;
-  :workExpressionOf bdr:W19740 ;
-  adm:license bdr:LicenseCopyrighted ;
-  adm:access bdr:AccessOpen ;
-  :originalRecord "http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/bsa003_u.htm"^^xsd:anyURI ;
-  skos:prefLabel "Santideva: Bodhicaryavatara [alternative version] (input by members of the Sanskrit Buddhist Canon Input Project)"@en .
+bdr:IIA_BCA a :ItemImageAsset ;
+  :itemHasVolume  bdr:VIA_BCA ;
+  :itemImageAssetForWork  bdr:WIA_BCA ;
+  :itemVolumes  1 .
+
+bdr:VIA_BCA a :VolumeImageAsset ;
+  :hasIIIFManifest  <https://iiif.archivelab.org/iiif/rashodgson13/manifest.json> ;
+  :volumeNumber 1 ;
+  :volumeOf  bdr:IIA_BCA .
