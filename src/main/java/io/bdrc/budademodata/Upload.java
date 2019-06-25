@@ -50,7 +50,7 @@ public class Upload {
     public static final String FusekiDataUrl = FusekiBaseUrl+"/data";
     public static final String FusekiQueryUrl = FusekiBaseUrl+"/query";
     public static RDFConnection fuConn;
-    public static final String graphName = "http://purl.bdrc.io/tmp/budademodata";
+    public static final String graphName = "http://purl.bdrc.io/graph/tmpbudademodata";
     public static Reasoner bdrcReasoner = null;
     
     static {

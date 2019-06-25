@@ -1,0 +1,6 @@
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
+
+bdr:I4CZ5369_E001 bdo:itemForWork  bdr:W22084 , bdr:W30532 .
+bdr:W22084 bdo:workHasItem bdr:I4CZ5369_E001 .
+bdr:W30532 bdo:workHasItem bdr:I4CZ5369_E001 .
