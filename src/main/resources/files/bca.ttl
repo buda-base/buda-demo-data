@@ -1,4 +1,5 @@
 @prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix bdo:      <http://purl.bdrc.io/ontology/core/> .
 @prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -23,6 +24,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
 
 bdr:W3CN1560 :workExpressionOf bdr:W0RTT3216 .
 bdr:W21971 :workExpressionOf bdr:W0RTT3216 .
@@ -79,6 +81,14 @@ bdr:WBNF_BCA a :Work ;
   :originalRecord "http://gallica.bnf.fr/ark:/12148/btv1b8307216j"^^xsd:anyURI ;
   :workHasItemImageAsset  bdr:IBNF_BCA .
 
+bda:IBNF_BCA a  adm:AdminData ;
+   bdo:isRoot    true ;
+   adm:access    bda:AccessOpen ;
+   adm:adminAbout  bdr:IBNF_BCA ;
+   adm:contentLegal  bda:LD_EAP_content ;
+   adm:restrictedInChina  false ;
+   adm:status    bda:StatusReleased .
+
 bdr:IBNF_BCA a :ItemImageAsset ;
   :itemHasVolume  bdr:VBNF_BCA ;
   :itemImageAssetForWork  bdr:WBNF_BCA ;
@@ -96,6 +106,14 @@ bdr:WSAT_BCA a :Work ;
   :workLangScript :ZhHant ;
   :workHasItemImageAsset  bdr:ISAT_BCA ;
   :originalRecord "http://21dzk.l.u-tokyo.ac.jp/SAT2012/T1662.html"^^xsd:anyURI .
+
+bda:ISAT_BCA a  adm:AdminData ;
+   bdo:isRoot    true ;
+   adm:access    bda:AccessOpen ;
+   adm:adminAbout  bdr:ISAT_BCA ;
+   adm:contentLegal  bda:LD_EAP_content ;
+   adm:restrictedInChina  false ;
+   adm:status    bda:StatusReleased .
 
 bdr:ISAT_BCA a :ItemImageAsset ;
   :itemHasVolume  bdr:VSAT_BCA ;
@@ -120,6 +138,14 @@ bdr:WIA_BCA a :Work ;
     :workLangScript bdr:SaNewa ;
     :originalRecord "https://archive.org/details/rashodgson13"^^xsd:anyURI ;
     :workHasItemImageAsset  bdr:IIA_BCA .
+
+bda:IIA_BCA a  adm:AdminData ;
+   bdo:isRoot    true ;
+   adm:access    bda:AccessOpen ;
+   adm:adminAbout  bdr:IIA_BCA ;
+   adm:contentLegal  bda:LD_EAP_content ;
+   adm:restrictedInChina  false ;
+   adm:status    bda:StatusReleased .
 
 bdr:IIA_BCA a :ItemImageAsset ;
   :itemHasVolume  bdr:VIA_BCA ;
