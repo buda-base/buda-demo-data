@@ -93,11 +93,13 @@ bdr:IBNF_BCA a :ItemImageAsset ;
   :itemVolumes  1 .
 
 bdr:VBNF_BCA a :VolumeImageAsset ;
+   :volumeNumber 1 ;
   :hasIIIFManifest  <http://gallica.bnf.fr/iiif/ark:/12148/btv1b8307216j/manifest.json> ;
   :volumeOf  bdr:IBNF_BCA .
 
 bdr:WSAT_BCA a :Work ;
 	:contentProvider bdr:CPSAT ;
+    skos:prefLabel "菩提行經"@zh-Hant ;
   :workExpressionOf bdr:WZHBCA ;
   :workLangScript :ZhHant ;
   :workHasItem  bdr:ISAT_BCA ;
@@ -118,6 +120,7 @@ bdr:ISAT_BCA a :ItemImageAsset ;
 
 bdr:VSAT_BCA a :VolumeImageAsset ;
   :hasIIIFManifest  <https://dzkimgs.l.u-tokyo.ac.jp/iiif/taisho/manifests/1662_32_manifest.json> ;
+  :volumeNumber 1 ;
   :volumeOf  bdr:ISAT_BCA .
 
 bdr:WIA_BCA a :Work ;
