@@ -72,14 +72,12 @@ bdr:W0RTT3216 :workHasExpression bdr:WBNF_BCA , bdr:W3CN1560 , bdr:W21971 , bdr:
 bdr:WBNF_BCA a :Work ;
 	:contentProvider bdr:CPBnF ;
 	skos:prefLabel "Manuscrit Pelliot tibétain 794"@fr ;
-  adm:license bdr:PublicDomain ;
-  adm:access bdr:AccessOpen ;
 	rdfs:comment "Dunhuang manuscript"@en ;
   :workMaterial  bdr:MaterialPaper ;
   :workObjectType  bdr:ObjectTypeManuscript ;
   :workExpressionOf bdr:W0RTT3216 ;
   :originalRecord "http://gallica.bnf.fr/ark:/12148/btv1b8307216j"^^xsd:anyURI ;
-  :workHasItemImageAsset  bdr:IBNF_BCA .
+  :workHasItem  bdr:IBNF_BCA .
 
 bda:IBNF_BCA a  adm:AdminData ;
    bdo:isRoot    true ;
@@ -91,7 +89,7 @@ bda:IBNF_BCA a  adm:AdminData ;
 
 bdr:IBNF_BCA a :ItemImageAsset ;
   :itemHasVolume  bdr:VBNF_BCA ;
-  :itemImageAssetForWork  bdr:WBNF_BCA ;
+  :itemForWork  bdr:WBNF_BCA ;
   :itemVolumes  1 .
 
 bdr:VBNF_BCA a :VolumeImageAsset ;
@@ -100,11 +98,9 @@ bdr:VBNF_BCA a :VolumeImageAsset ;
 
 bdr:WSAT_BCA a :Work ;
 	:contentProvider bdr:CPSAT ;
-  adm:license bdr:LicenseCCBYSA4U ;
-  adm:access bdr:AccessOpen ;
   :workExpressionOf bdr:WZHBCA ;
   :workLangScript :ZhHant ;
-  :workHasItemImageAsset  bdr:ISAT_BCA ;
+  :workHasItem  bdr:ISAT_BCA ;
   :originalRecord "http://21dzk.l.u-tokyo.ac.jp/SAT2012/T1662.html"^^xsd:anyURI .
 
 bda:ISAT_BCA a  adm:AdminData ;
@@ -117,7 +113,7 @@ bda:ISAT_BCA a  adm:AdminData ;
 
 bdr:ISAT_BCA a :ItemImageAsset ;
   :itemHasVolume  bdr:VSAT_BCA ;
-  :itemImageAssetForWork  bdr:WSAT_BCA ;
+  :itemForWork  bdr:WSAT_BCA ;
   :itemVolumes  1 .
 
 bdr:VSAT_BCA a :VolumeImageAsset ;
@@ -128,8 +124,6 @@ bdr:WIA_BCA a :Work ;
     :contentProvider bdr:CPIA ;
     skos:prefLabel "Bodhicaryāvatāra"@sa-x-iast ;
     skos:prefLabel "Bodhicaryāvatāra (Hodgson Collection)"@en ;
-    adm:license bdr:PublicDomain ;
-    adm:access bdr:AccessOpen ;
     rdfs:comment "From the Collection of the Royal Asiatic Society"@en ;
     :workIncipit "sugatānsamutansadharmakāyān praṇipatyādarato ‘khilāṃśca vaṃdyān | sugatātmajasaṃvarāvatāraṃ kathayiṣyāmi yathāgamaṃ samāsāt || na hi kiṃcidapūrvamatra vācyaṃ na ca saṃgraṃthanakośalaṃ mamāsti | ata eva na me parārthacintā svamano bhāvayituṃ kṛtaṃ mayedaṃ"@sa-x-iast ;
     :workMaterial  bdr:MaterialPalmLeaf ;
@@ -137,7 +131,7 @@ bdr:WIA_BCA a :Work ;
     :workExpressionOf bdr:W19740 ;
     :workLangScript bdr:SaNewa ;
     :originalRecord "https://archive.org/details/rashodgson13"^^xsd:anyURI ;
-    :workHasItemImageAsset  bdr:IIA_BCA .
+    :workHasItem  bdr:IIA_BCA .
 
 bda:IIA_BCA a  adm:AdminData ;
    bdo:isRoot    true ;
@@ -149,7 +143,7 @@ bda:IIA_BCA a  adm:AdminData ;
 
 bdr:IIA_BCA a :ItemImageAsset ;
   :itemHasVolume  bdr:VIA_BCA ;
-  :itemImageAssetForWork  bdr:WIA_BCA ;
+  :itemForWork  bdr:WIA_BCA ;
   :itemVolumes  1 .
 
 bdr:VIA_BCA a :VolumeImageAsset ;
