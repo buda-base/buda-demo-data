@@ -70,7 +70,7 @@ bdr:WCBETA_BCA a :Work ;
 bdr:W0RTT3216 :workHasExpression bdr:WBNF_BCA , bdr:W3CN1560 , bdr:W21971 , bdr:W1PD95844_3603 , bdr:W22704_3441 , bdr:W23702_3441 , bdr:W1KG13126_3449 , bdr:W25983_0035 .
 
 bdr:WBNF_BCA a :Work ;
-	:contentProvider bdr:CPBnF ;
+	:contentProvider bda:CP022 ;
 	skos:prefLabel "Manuscrit Pelliot tibétain 794"@fr ;
 	rdfs:comment "Dunhuang manuscript"@en ;
   :workMaterial  bdr:MaterialPaper ;

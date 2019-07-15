@@ -36,6 +36,7 @@ bdr:WSBB_WKG a :Work ;
   :workLangScript bdr:BoDbuCan ;
   :workOtherLangScript bdr:ZhHant ;
   :workEvent  bdr:WSBB_EV1 ;
+  :workGenre bdr:T2423 ;
   :workHasItem  bdr:ISBB_WKG .
 
 bdr:WSBB_EV1  a  bdo:PublishedEvent ;
@@ -706,7 +707,7 @@ bda:VSBB_W60
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB000254FC00000000"^^xsd:anyURI ;
    adm:adminAbout bdr:VSBB_W50 .
 
-bdr:VSBB_W50 a :VolumeImageAsset ;
+bdr:VSBB_W60 a :VolumeImageAsset ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/1040799280/manifest> ;
   :volumeNumber 60 ;
     skos:prefLabel "བདེ་བར་གཤེགས་པའི་གསུང་རབ་རིན་པོ་ཆེའི་དཀར་ཆགས"@bo ;
