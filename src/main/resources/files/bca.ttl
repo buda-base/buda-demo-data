@@ -101,7 +101,7 @@ bdr:WSAT_BCA a :Work ;
 	:contentProvider bdr:CPSAT ;
     skos:prefLabel "菩提行經"@zh-Hant ;
   :workExpressionOf bdr:WZHBCA ;
-  :workLangScript :ZhHant ;
+  :workLangScript bdr:ZhHant ;
   :workHasItem  bdr:ISAT_BCA ;
   :originalRecord "http://21dzk.l.u-tokyo.ac.jp/SAT2012/T1662.html"^^xsd:anyURI .
 
