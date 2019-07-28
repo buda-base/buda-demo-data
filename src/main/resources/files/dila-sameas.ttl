@@ -1,0 +1,55 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix bdo:      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix tbr:   <http://purl.bdrc.io/ontology/toberemoved/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rkts:    <http://purl.rkts.eu/resource/> .
+@prefix viaf:    <http://viaf.org/viaf/> .
+@prefix wcat:    <http://www.worldcat.org/oclc/> .
+@prefix wde:     <http://www.wikidata.org/entity/> .
+@prefix tol:     <http://api.treasuryoflives.org/resource/> .
+@prefix schema: <http://schema.org/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix umbel: <http://umbel.org/umbel#> .
+@prefix re:    <http://oclcsrw.google.code/redirect> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rdagr2: <http://rdvocab.info/ElementsGr2/> .
+@prefix bio: <http://purl.org/vocab/bio/0.1/> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+
+    
+<http://purl.dila.edu.tw/resource/A001318> owl:sameAs bdr:P6117 .
+bdr:P6117 owl:sameAs <http://purl.dila.edu.tw/resource/A001318> .
+
+
+<http://purl.dila.edu.tw/resource/A001318>
+        a                    bdo:Person ;
+        bdo:note             <http://purl.dila.edu.tw/resource/A001318_N1> , <http://purl.dila.edu.tw/resource/A001318_N2> ;
+        bdo:personEvent      <http://purl.dila.edu.tw/resource/A001318_B> ;
+        bdo:personGender     <http://purl.bdrc.io/resource/GenderMale> ;
+        bdo:personStudentOf  <http://purl.dila.edu.tw/resource/A001428> , <http://purl.dila.edu.tw/resource/A042476> ;
+        bdo:personTeacherOf  <http://purl.dila.edu.tw/resource/A000148> ;
+        skos:altLabel        "阿僧伽"@zh-Hant , "無障礙"@zh-Hant , "無著菩薩"@zh-Hant , "thogs pa med"@bo-x-ewts , "無著"@zh-Hant ;
+        skos:prefLabel       "無著"@zh-Hant , "thogs med"@bo-x-ewts , "Asaṅga"@sa-x-iast .
+
+<http://purl.dila.edu.tw/resource/A001318_B>
+        a               bdo:PersonBirth ;
+        bdo:eventWhere  <http://purl.dila.edu.tw/resource/PL49232> .
+
+<http://purl.dila.edu.tw/resource/A001318_N1>
+        a             bdo:Note ;
+        bdo:noteText  "古代印度佛教哲學家、大乘佛教瑜伽行派創始人之一。憍尸迦（梵 Kauśika）婆羅門之子。賓頭盧曾來解說「空性」，助其領悟小乘空觀。後用神通力升至兜率天，從彌勒菩薩處領受大乘之空性法教。著有《金剛般若論》、《順中論》、《攝大乘論》、《大乘阿毘達磨雜集論》、《顯揚聖教論頌》、《六門教授習定論頌》等。（佛百：4332.1；佛光：5126）" .
+
+<http://purl.dila.edu.tw/resource/A001318_N2>
+        a             bdo:Note ;
+        bdo:noteText  "（310-390 或 395-470）生於西元四、五世紀頃的印度佛教哲學家。北印度健馱邏國普魯夏普拉（梵Puruṣa-pura，布路沙布邏、富婁沙富羅）人。為古代印度大乘佛教瑜伽行派創始人之一。唯識佛教的大成就者，在真諦所翻譯的《婆藪槃豆法師傳》中可找到無著的生平略述。憍尸迦婆羅門之子，在三兄弟中排行第一。三兄弟都被稱為婆藪槃豆，不過又各有別名，其中第二子即佛教史上知名的世親。無著原本依止說一切有部出家並學習禪定，然而他在「空性」義理上始終無法了解，因此在絕望之際打算自殺。此時有一位名為賓頭盧的阿羅漢前來為他解說「空性」，於是無著終於理解了小乘空觀。但無著不以此為滿足，乃利用神通力升至兜率天，並且從彌勒菩薩處領受了大乘的空性法教。返回後他繼續深究其義理，最後終於完全通達了解。無著的著作有漢譯的《瑜伽師地論》百卷，然此書內容複雜廣博，是否為無著一人所著仍有待查證。另外在中國的傳承中，也有《瑜伽師地論》作者為彌勒菩薩的說法。無著的其他著作尚有《大乘阿毗達磨集論》、《攝大乘論》、《顯揚聖教論》、《金剛般若經論》、《六門教授習定論》、《順中論》等。（西域注：235；佛百：4332.1；佛光：5126；インド仏教：001）" .
+
