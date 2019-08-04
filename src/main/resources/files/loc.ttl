@@ -1,0 +1,80 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix bdo:      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix tbr:   <http://purl.bdrc.io/ontology/toberemoved/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rkts:    <http://purl.rkts.eu/resource/> .
+@prefix viaf:    <http://viaf.org/viaf/> .
+@prefix wcat:    <http://www.worldcat.org/oclc/> .
+@prefix wde:     <http://www.wikidata.org/entity/> .
+@prefix tol:     <http://api.treasuryoflives.org/resource/> .
+@prefix schema: <http://schema.org/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix umbel: <http://umbel.org/umbel#> .
+@prefix re:    <http://oclcsrw.google.code/redirect> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rdagr2: <http://rdvocab.info/ElementsGr2/> .
+@prefix bio: <http://purl.org/vocab/bio/0.1/> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+
+bda:W0LOC0001 a  adm:AdminData ;
+   bdo:isRoot    true ;
+   adm:access    bda:AccessOpen ;
+   adm:adminAbout  bdr:W0LOC0001 ;
+   adm:metadataLegal  bda:LD_LOC_metadata ;
+   adm:originalRecord "https://lccn.loc.gov/2018305008"^^xsd:anyURI ;
+   adm:status    bda:StatusReleased .
+
+bdr:W0LOC0001 a :Work ;
+    skos:prefLabel "Gandhari scroll (Bahubuddha Sutra)"@en ;
+    skos:prefLabel "Bahubuddha-sūtra"@sa-x-iast ;
+    :note bdr:W0LOC0001_N1 ;
+    rdfs:seeAlso "https://blogs.loc.gov/loc/2019/07/now-online-the-gandhara-scroll-a-rare-2000-year-old-text-of-early-buddhism/"^^xsd:anyURI ;
+  :workMaterial  bdr:MaterialBirchBark ;
+  :binding bdr:Binding_Continuous_Scroll ;
+  :workLangScript bdr:PgdKhar ;
+  :workEvent  bdr:W0LOC0001_EV1 ;
+  :workHasItem  bdr:I0LOC0001 .
+
+bdr:W0LOC0001_EV1  a  bdo:PublishedEvent ;
+   bdo:notBefore  -99 ;
+   bdr:notAfter   99 .
+
+bdr:W0LOC0001_N1  a  bdo:Note ;
+   bdo:noteText """Contains information on the parallel lives of fifteen buddhas: Dīpaṅkara, Sarvābhibhū, Padmottara, Atyuccagāmin, Yaśottara, Śākyamuni [I], Tiṣya, Vipaśyin, Śikhin, Viśvabhū, Krakucchanda, Konākamuni, Kāśyapa, Śākyamuni [II] (also known as Siddhartha Gautama), and Maitreya. The scroll gives the buddhas' predictions of Śākyamuni's future coming as the Buddha; his four courses of training under the other buddhas; their lifespans; eons in which they lived; social class into which they were born; their assemblies of disciples; and duration of their teachings. 
+
+   Scholars have informally called this scroll the Bahubuddha Sutra, or 'The Many Buddhas Sutra,' because it resembles a text with a similar name in Sanskrit. The scroll discusses the lives of fifteen buddhas. The text is narrated by Shakyamuni Buddha who gives very short biographies of thirteen buddhas who came before him, followed by his birth and emergence as Shakyamuni Buddha, and ending with the prediction of the future buddha, Maitreya. The biographies contain other information, such as how long each buddha lived, how each predicted the eventual appearance of Shakyamuni Buddha, what social class the buddha was born into, and how long his teachings endured.
+   """ .
+
+bda:I0LOC0001 a  adm:AdminData ;
+   bdo:isRoot    true ;
+   adm:access    bda:AccessOpen ;
+   adm:adminAbout  bdr:I0LOC0001 ;
+   adm:contentLegal  bda:LD_LOC_PD ;
+   adm:restrictedInChina  false ;
+   adm:originalRecord "https://lccn.loc.gov/2018305008"^^xsd:anyURI ;
+   adm:status    bda:StatusReleased .
+
+bdr:I0LOC0001 a :ItemImageAsset ;
+  :itemHasVolume  bdr:V0LOC0001 ;
+  :itemForWork  bdr:W0LOC0001 ;
+  :itemVolumes  60 .
+
+bda:V0LOC0001
+   adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB0002354500000000"^^xsd:anyURI ;
+   adm:adminAbout bdr:V0LOC0001 .
+
+bdr:V0LOC0001 a :VolumeImageAsset ;
+   :hasIIIFManifest  <https://www.loc.gov/item/2018305008/manifest.json> ;
+  :volumeNumber 1 ;
+   :volumeOf  bdr:I0LOC0001 ;
+.
