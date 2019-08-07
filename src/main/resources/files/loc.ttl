@@ -28,7 +28,6 @@
 
 bda:W0LOC0001 a  adm:AdminData ;
    bdo:isRoot    true ;
-   adm:access    bda:AccessOpen ;
    adm:adminAbout  bdr:W0LOC0001 ;
    adm:metadataLegal  bda:LD_LOC_metadata ;
    adm:originalRecord "https://lccn.loc.gov/2018305008"^^xsd:anyURI ;
@@ -43,6 +42,8 @@ bdr:W0LOC0001 a :Work ;
   :binding bdr:Binding_Continuous_Scroll ;
   :workLangScript bdr:PgdKhar ;
   :workEvent  bdr:W0LOC0001_EV1 ;
+  :workLcCallNumber "BQ4670 .G36" ;
+  :workLccn "2018305008" ;
   :workHasItem  bdr:I0LOC0001 .
 
 bdr:W0LOC0001_EV1  a  bdo:PublishedEvent ;
