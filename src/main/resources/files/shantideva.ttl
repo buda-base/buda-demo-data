@@ -31,6 +31,7 @@ bdr:P6161 :sameAsVIAF viaf:23444930 ;
    owl:sameAs viaf:23444930 ;
    rdfs:seeAlso <http://zhishi.me/baidubaike/resource/%E5%AF%82%E5%A4%A9> ;
    owl:sameAs wd:Q445460 ;
+   owl:sameAs <http://purl.dila.edu.tw/resource/A017001> ;
    rdfs:seeAlso <https://baike.baidu.com/item/%E5%AF%82%E5%A4%A9> ;
    rdfs:seeAlso <http://www.rigpawiki.org/index.php?title=Shantideva> ;
    rdfs:seeAlso <https://www.himalayanart.org/search/set.cfm?setID=661> ;
@@ -146,7 +147,7 @@ wd:Q445460 a wikibase:Item ;
 	owl:sameAs <https://livedata.bibsys.no/authority/90983014> .
 
 
-<http://authority.dila.edu.tw/person/?fromInner=A017001> a :Person ;
+<http://purl.dila.edu.tw/resource/A017001> a :Person ;
     skos:prefLabel "寂天"@zh-hant ;
     skos:altLabel "寂鎧"@zh-hant , "寂鎧梵"@zh-hant , "Śāntideva"@sa-x-iast , "Shi-ba lha"@bo-x-dts ;
     :personGender  bdr:GenderMale ;
