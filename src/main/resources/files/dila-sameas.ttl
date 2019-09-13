@@ -38,8 +38,8 @@ bdr:P6117 owl:sameAs <http://purl.dila.edu.tw/resource/A001318> .
         bdo:personGender     <http://purl.bdrc.io/resource/GenderMale> ;
         bdo:personStudentOf  <http://purl.dila.edu.tw/resource/A001428> , <http://purl.dila.edu.tw/resource/A042476> ;
         bdo:personTeacherOf  <http://purl.dila.edu.tw/resource/A000148> ;
-        skos:altLabel        "阿僧伽"@zh-Hant , "無障礙"@zh-Hant , "無著菩薩"@zh-Hant , "thogs pa med"@bo-x-ewts , "無著"@zh-Hant ;
-        skos:prefLabel       "無著"@zh-Hant , "thogs med"@bo-x-ewts , "Asaṅga"@sa-x-iast .
+        skos:altLabel        "阿僧伽"@zh-Hant , "無障礙"@zh-Hant , "無著菩薩"@zh-Hant , "thogs pa med"@bo-x-ewts , "無著"@zh-Hant , "thogs med"@bo-x-ewts , "Asaṅga"@sa-x-iast ;
+        skos:prefLabel       "無著"@zh-Hant .
 
 <http://purl.dila.edu.tw/resource/A001318_B>
         a               bdo:PersonBirth ;

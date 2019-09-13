@@ -32,7 +32,7 @@ bdr:W1EE17 :workExpressionOf bdr:WMNBCA .
 
 bdr:W1KG8889 :workExpressionOf bdr:W0RTT3169 .
 
-bdr:W19740 :workHasExpression bdr:WZHBCA , bdr:WMNBCA , bdr:WGR_BCA_1 , bdr:WGR_BCA_2 .
+bdr:W19740 :workHasExpression bdr:WMNBCA , bdr:WGR_BCA_1 , bdr:WGR_BCA_2 .
    
 bdr:PTBCA a :Person ;
     rdfs:seeAlso "https://dazangthings.nz/cbc/person/158/"^^xsd:anyURI ;
@@ -42,30 +42,10 @@ bdr:PTBCA a :Person ;
 bdr:WMNBCA a :Work ;
     :workType bdr:WorkTypeAbstractWork ;
     :workType bdr:WorkTypeAbstractWork ;
-    :workLangScript :Mn ;
+    :workLangScript bdr:Mn ;
     skos:prefLabel "bodisung narun yabudal-dur oruqui neretu sastir" ;
     :workExpressionOf bdr:W19740 ;
     :workHasExpression bdr:W1EE17 .
-
-bdr:WZHBCA a :Work ;
-    :workType bdr:WorkTypeAbstractWork ;
-    :workLangScript :Zh ;
-    skos:prefLabel "菩提行經"@zh-hant ;
-    :workTitle  [ a             :WorkBibliographicalTitle ;
-                    rdfs:label    "菩提行經"@zh-hant
-                  ] ;
-    :creatorTranslator bdr:PTBCA ;
-    :workExpressionOf bdr:W19740 ;
-    rdfs:seeAlso "https://dazangthings.nz/cbc/text/1514/"^^xsd:anyURI ;
-    :workRefTaisho "T1662" ;
-    :workHasExpression bdr:WCBETA_BCA , bdr:WSAT_BCA .
-
-bdr:WCBETA_BCA a :Work ;
-    :contentProvider bdr:CPCBETA ;
-    :workExpressionOf bdr:WZHBCA ;
-    rdfs:seeAlso "http://tripitaka.cbeta.org/T32n1662"^^xsd:anyURI ;
-    :workLangScript :ZhHant .
-    
 
 bdr:W0RTT3216 :workHasExpression bdr:WBNF_BCA , bdr:W3CN1560 , bdr:W21971 , bdr:W1PD95844_3603 , bdr:W22704_3441 , bdr:W23702_3441 , bdr:W1KG13126_3449 , bdr:W25983_0035 .
 
@@ -96,32 +76,6 @@ bdr:VBNF_BCA a :VolumeImageAsset ;
    :volumeNumber 1 ;
   :hasIIIFManifest  <http://gallica.bnf.fr/iiif/ark:/12148/btv1b8307216j/manifest.json> ;
   :volumeOf  bdr:IBNF_BCA .
-
-bdr:WSAT_BCA a :Work ;
-	:contentProvider bdr:CPSAT ;
-    skos:prefLabel "菩提行經"@zh-Hant ;
-  :workExpressionOf bdr:WZHBCA ;
-  :workLangScript bdr:ZhHant ;
-  :workHasItem  bdr:ISAT_BCA ;
-  :originalRecord "http://21dzk.l.u-tokyo.ac.jp/SAT2012/T1662.html"^^xsd:anyURI .
-
-bda:ISAT_BCA a  adm:AdminData ;
-   bdo:isRoot    true ;
-   adm:access    bda:AccessOpen ;
-   adm:adminAbout  bdr:ISAT_BCA ;
-   adm:contentLegal  bda:LD_EAP_content ;
-   adm:restrictedInChina  false ;
-   adm:status    bda:StatusReleased .
-
-bdr:ISAT_BCA a :ItemImageAsset ;
-  :itemHasVolume  bdr:VSAT_BCA ;
-  :itemForWork  bdr:WSAT_BCA ;
-  :itemVolumes  1 .
-
-bdr:VSAT_BCA a :VolumeImageAsset ;
-  :hasIIIFManifest  <https://dzkimgs.l.u-tokyo.ac.jp/iiif/taisho/manifests/1662_32_manifest.json> ;
-  :volumeNumber 1 ;
-  :volumeOf  bdr:ISAT_BCA .
 
 bdr:WIA_BCA a :Work ;
     :contentProvider bdr:CPIA ;
