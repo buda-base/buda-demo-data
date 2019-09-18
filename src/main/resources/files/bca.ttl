@@ -32,25 +32,30 @@ bdr:W1EE17 :workExpressionOf bdr:WMNBCA .
 
 bdr:W1KG8889 :workExpressionOf bdr:W0RTT3169 .
 
-bdr:W19740 :workHasDerivative bdr:WMNBCA .
+bdr:W19740 :workHasDerivative bdr:WMNBCA , bdr:WBNF_BCA .
+
+bdr:W19740 :workHasExpression bdr:WIA_BCA .
    
 bdr:PTBCA a :Person ;
     rdfs:seeAlso "https://dazangthings.nz/cbc/person/158/"^^xsd:anyURI ;
     rdfs:seeAlso "http://authority.dila.edu.tw/person/?fromInner=A000146"^^xsd:anyURI ;
-    skos:prefLabel "天息災"@zh-hant , "Tianxizai"@zh-x-phon-en .
+    skos:prefLabel "天息災"@zh-hant .
 
-bdr:WMNBCA a :Work ;
-    :workType bdr:WorkTypeAbstractWork ;
-    :workType bdr:WorkTypeAbstractWork ;
+bdr:WMNBCA a bdo:AbstractWork , :Work ;
     :workLangScript bdr:Mn ;
-    skos:prefLabel "bodisung narun yabudal-dur oruqui neretu sastir" ;
+    skos:prefLabel "bodisung narun yabudal-dur oruqui neretu sastir"@mn-x-poppe ;
     :workExpressionOf bdr:W19740 ;
     :workHasExpression bdr:W1EE17 .
 
-bdr:W0RTT3216 :workHasExpression bdr:WBNF_BCA , bdr:W3CN1560 , bdr:W21971 , bdr:W1PD95844_3603 , bdr:W22704_3441 , bdr:W23702_3441 , bdr:W1KG13126_3449 , bdr:W25983_0035 .
+bdr:W0RTT3216 :workHasExpression bdr:W3CN1560 , bdr:W21971 , bdr:W1PD95844_3603 , bdr:W22704_3441 , bdr:W23702_3441 , bdr:W1KG13126_3449 , bdr:W25983_0035 .
 
+bda:WBNF_BCA a adm:AdminData ;
+   bdo:isRoot    true ;
+   adm:access    bda:AccessOpen ;
+   adm:adminAbout  bdr:WBNF_BCA ;
+   adm:metadataLegal  bda:LD_BNF_PD ;
+.
 bdr:WBNF_BCA a :Work ;
-	:contentProvider bda:CP022 ;
 	skos:prefLabel "Manuscrit Pelliot tibétain 794"@fr ;
 	rdfs:comment "Dunhuang manuscript"@en ;
   :workMaterial  bdr:MaterialPaper ;
@@ -63,7 +68,7 @@ bda:IBNF_BCA a  adm:AdminData ;
    bdo:isRoot    true ;
    adm:access    bda:AccessOpen ;
    adm:adminAbout  bdr:IBNF_BCA ;
-   adm:contentLegal  bda:LD_EAP_content ;
+   adm:contentLegal  bda:LD_BNF_PD ;
    adm:restrictedInChina  false ;
    adm:status    bda:StatusReleased .
 
@@ -77,8 +82,13 @@ bdr:VBNF_BCA a :VolumeImageAsset ;
   :hasIIIFManifest  <http://gallica.bnf.fr/iiif/ark:/12148/btv1b8307216j/manifest.json> ;
   :volumeOf  bdr:IBNF_BCA .
 
+bda:WIA_BCA a adm:AdminData ;
+   bdo:isRoot    true ;
+   adm:access    bda:AccessOpen ;
+   adm:adminAbout  bdr:WIA_BCA ;
+   adm:metadataLegal  bda:LD_IA_PD ;
+.
 bdr:WIA_BCA a :Work ;
-    :contentProvider bdr:CPIA ;
     skos:prefLabel "Bodhicaryāvatāra"@sa-x-iast ;
     skos:prefLabel "Bodhicaryāvatāra (Hodgson Collection)"@en ;
     rdfs:comment "From the Collection of the Royal Asiatic Society"@en ;
@@ -94,7 +104,7 @@ bda:IIA_BCA a  adm:AdminData ;
    bdo:isRoot    true ;
    adm:access    bda:AccessOpen ;
    adm:adminAbout  bdr:IIA_BCA ;
-   adm:contentLegal  bda:LD_EAP_content ;
+   adm:contentLegal  bda:LD_IA_PD ;
    adm:restrictedInChina  false ;
    adm:status    bda:StatusReleased .
 
