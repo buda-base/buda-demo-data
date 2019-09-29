@@ -32,7 +32,7 @@ bdr:W1EE17 :workExpressionOf bdr:WMNBCA .
 
 bdr:W1KG8889 :workExpressionOf bdr:W0RTT3169 .
 
-bdr:W19740 :workHasDerivative bdr:WMNBCA , bdr:WBNF_BCA .
+bdr:W19740 :workHasTranslation bdr:WMNBCA , bdr:WBNF_BCA .
 
 bdr:W19740 :workHasExpression bdr:WIA_BCA .
    

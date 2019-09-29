@@ -24,7 +24,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
 
-bdr:W22003 :workHasExpression bdr:WZHMNS .
+bdr:W22003 :workHasTranslation bdr:WZHMNS .
 
 bdr:WZHMNS a :Work ;
     skos:prefLabel "佛說最勝妙吉祥根本智最上祕密一切名義三摩地分卷上"@zh-hant ;
