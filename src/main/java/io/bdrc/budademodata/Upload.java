@@ -44,7 +44,7 @@ public class Upload {
     public static final String XSD_PREFIX = "http://www.w3.org/2001/XMLSchema#";
     
     //public static final String FusekiBaseUrl = "http://buda1.bdrc.io:13180/fuseki/bdrcrw";
-    public static final String FusekiBaseUrl = "http://buda1.bdrc.io:13180/fuseki/bdrcrw";
+    public static final String FusekiBaseUrl = "http://buda1.bdrc.io:13180/fuseki/corerw";
     public static final String FusekiDataUrl = FusekiBaseUrl+"/data";
     public static final String FusekiQueryUrl = FusekiBaseUrl+"/query";
     public static RDFConnection fuConn;
