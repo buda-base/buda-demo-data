@@ -2,10 +2,9 @@
 @prefix bdo:   <http://purl.bdrc.io/ontology/core/> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 
-bdr:I4CZ5369_E001 bdo:itemForWork  bdr:W22084 , bdr:W30532 .
-bdr:W22084 bdo:workHasItem bdr:I4CZ5369_E001 .
-bdr:W30532 bdo:workHasItem bdr:I4CZ5369_E001 .
-
-bdr:W0ER00100 a bdo:Work , bdo:AbstractWork ;
-    skos:prefLabel "Derge Kangyur"@en , "bka' 'gyur/ sde dge par ma/"@bo-x-ewts ;
-    bdo:hasExpression bdr:W22084 , bdr:W30532 , bdr:W4CZ5369 .
+bdr:IE4CZ5369_E001 bdo:instanceReproductionOf  bdr:MW22084 , bdr:MW30532 .
+bdr:IE4CZ5369_E001 bdo:instanceOf  bdr:WA22084 , bdr:WA30532 .
+bdr:MW22084 bdo:instanceHasReproduction bdr:IE4CZ5369_E001 .
+bdr:MW30532 bdo:instanceHasReproduction bdr:IE4CZ5369_E001 .
+bdr:WA22084 bdo:workHasInstance bdr:IE4CZ5369_E001 .
+bdr:WA30532 bdo:workHasInstance bdr:IE4CZ5369_E001 .

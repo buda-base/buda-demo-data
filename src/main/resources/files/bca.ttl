@@ -26,28 +26,25 @@
 @prefix wd: <http://www.wikidata.org/entity/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 
-bdr:W3CN1560 :workExpressionOf bdr:W0RTT3216 .
-bdr:W21971 :workExpressionOf bdr:W0RTT3216 .
-bdr:W1EE17 :workExpressionOf bdr:WMNBCA .
+# TODO: put in the abstract mappings of 
 
-bdr:W1KG8889 :workExpressionOf bdr:W0RTT3169 .
+#bdr:MW3CN1560 :instanceOf bdr:WA0RT3216 .
+#bdr:MW21971 :instanceOf bdr:WA0RT3216 .
+#bdr:MW1EE17 :instanceOf bdr:WAMNBCA .
 
-bdr:W19740 :workHasTranslation bdr:WMNBCA , bdr:WBNF_BCA .
+#bdr:MW1KG8889 :instanceOf bdr:WA0RT3169 .
 
-bdr:W19740 :workHasExpression bdr:WIA_BCA .
-   
-bdr:PTBCA a :Person ;
-    rdfs:seeAlso "https://dazangthings.nz/cbc/person/158/"^^xsd:anyURI ;
-    rdfs:seeAlso "http://authority.dila.edu.tw/person/?fromInner=A000146"^^xsd:anyURI ;
-    skos:prefLabel "天息災"@zh-hant .
+#bdr:WA19740 :workHasTranslation bdr:WAMNBCA , bdr:WABNF_BCA .
 
-bdr:WMNBCA a bdo:AbstractWork , :Work ;
-    :workLangScript bdr:Mn ;
+# TODO: admindata
+
+bdr:WAMNBCA a :Work ;
+    :language bdr:LangMn ;
     skos:prefLabel "bodisung narun yabudal-dur oruqui neretu sastir"@mn-x-poppe ;
-    :workExpressionOf bdr:W19740 ;
-    :workHasExpression bdr:W1EE17 .
+    :workTranslationOf bdr:WA19740 ;
+    :workHasInstance bdr:W1EE17 .
 
-bdr:W0RTT3216 :workHasExpression bdr:W3CN1560 , bdr:W21971 , bdr:W1PD95844_3603 , bdr:W22704_3441 , bdr:W23702_3441 , bdr:W1KG13126_3449 , bdr:W25983_0035 .
+#bdr:WA0RT3216 :workHasInstance bdr:MW3CN1560 , bdr:MW21971 , bdr:W1PD95844_3603 , bdr:W22704_3441 , bdr:W23702_3441 , bdr:W1KG13126_3449 , bdr:W25983_0035 .
 
 bda:WBNF_BCA a adm:AdminData ;
    bdo:isRoot    true ;
@@ -55,65 +52,29 @@ bda:WBNF_BCA a adm:AdminData ;
    adm:adminAbout  bdr:WBNF_BCA ;
    adm:metadataLegal  bda:LD_BNF_PD ;
 .
-bdr:WBNF_BCA a :Work ;
+bdr:MWBNF_BCA a :Instance ;
 	skos:prefLabel "Manuscrit Pelliot tibétain 794"@fr ;
 	rdfs:comment "Dunhuang manuscript"@en ;
   :workMaterial  bdr:MaterialPaper ;
   :workObjectType  bdr:ObjectTypeManuscript ;
-  :workExpressionOf bdr:W0RTT3216 ;
+  :instanceOf bdr:W0RTT3216 ;
   :originalRecord "http://gallica.bnf.fr/ark:/12148/btv1b8307216j"^^xsd:anyURI ;
   :workHasItem  bdr:IBNF_BCA .
 
-bda:IBNF_BCA a  adm:AdminData ;
+bda:WBNF_BCA a  adm:AdminData ;
    bdo:isRoot    true ;
    adm:access    bda:AccessOpen ;
-   adm:adminAbout  bdr:IBNF_BCA ;
+   adm:adminAbout  bdr:WBNF_BCA ;
    adm:contentLegal  bda:LD_BNF_PD ;
    adm:restrictedInChina  false ;
    adm:status    bda:StatusReleased .
 
-bdr:IBNF_BCA a :ItemImageAsset ;
-  :itemHasVolume  bdr:VBNF_BCA ;
-  :itemForWork  bdr:WBNF_BCA ;
+bdr:WBNF_BCA a :ImageInstance ;
+  :instanceHasVolume  bdr:IBNF_BCA ;
+  :instanceReproductionOf  bdr:MWBNF_BCA ;
   :itemVolumes  1 .
 
-bdr:VBNF_BCA a :VolumeImageAsset ;
+bdr:IBNF_BCA a :ImageGroup ;
    :volumeNumber 1 ;
   :hasIIIFManifest  <http://gallica.bnf.fr/iiif/ark:/12148/btv1b8307216j/manifest.json> ;
-  :volumeOf  bdr:IBNF_BCA .
-
-bda:WIA_BCA a adm:AdminData ;
-   bdo:isRoot    true ;
-   adm:access    bda:AccessOpen ;
-   adm:adminAbout  bdr:WIA_BCA ;
-   adm:metadataLegal  bda:LD_IA_PD ;
-.
-bdr:WIA_BCA a :Work ;
-    skos:prefLabel "Bodhicaryāvatāra"@sa-x-iast ;
-    skos:prefLabel "Bodhicaryāvatāra (Hodgson Collection)"@en ;
-    rdfs:comment "From the Collection of the Royal Asiatic Society"@en ;
-    :workIncipit "sugatānsamutansadharmakāyān praṇipatyādarato ‘khilāṃśca vaṃdyān | sugatātmajasaṃvarāvatāraṃ kathayiṣyāmi yathāgamaṃ samāsāt || na hi kiṃcidapūrvamatra vācyaṃ na ca saṃgraṃthanakośalaṃ mamāsti | ata eva na me parārthacintā svamano bhāvayituṃ kṛtaṃ mayedaṃ"@sa-x-iast ;
-    :workMaterial  bdr:MaterialPalmLeaf ;
-    :workObjectType  bdr:ObjectTypeManuscript ;
-    :workExpressionOf bdr:W19740 ;
-    :workLangScript bdr:SaNewa ;
-    :originalRecord "https://archive.org/details/rashodgson13"^^xsd:anyURI ;
-    :workHasItem  bdr:IIA_BCA .
-
-bda:IIA_BCA a  adm:AdminData ;
-   bdo:isRoot    true ;
-   adm:access    bda:AccessOpen ;
-   adm:adminAbout  bdr:IIA_BCA ;
-   adm:contentLegal  bda:LD_IA_PD ;
-   adm:restrictedInChina  false ;
-   adm:status    bda:StatusReleased .
-
-bdr:IIA_BCA a :ItemImageAsset ;
-  :itemHasVolume  bdr:VIA_BCA ;
-  :itemForWork  bdr:WIA_BCA ;
-  :itemVolumes  1 .
-
-bdr:VIA_BCA a :VolumeImageAsset ;
-  :hasIIIFManifest  <https://iiif.archivelab.org/iiif/rashodgson13/manifest.json> ;
-  :volumeNumber 1 ;
-  :volumeOf  bdr:IIA_BCA .
+  :volumeOf  bdr:WBNF_BCA .
