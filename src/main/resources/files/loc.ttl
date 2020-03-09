@@ -52,8 +52,8 @@ bdr:MW0LOC0001 a :Work ;
   :instanceHasReproduction  bdr:W0LOC0001 .
 
 bdr:MW0LOC0001_EV1  a  bdo:CopyEvent ;
-   bdo:notBefore  "-99"^^xsd:gYear ;
-   bdr:notAfter   "99"^^xsd:gYear .
+   bdo:notBefore  "-0099"^^xsd:gYear ;
+   bdr:notAfter   "0099"^^xsd:gYear .
 
 bdr:W0LOC0001_N1  a  bdo:Note ;
    bdo:noteText """Contains information on the parallel lives of fifteen buddhas: Dīpaṅkara, Sarvābhibhū, Padmottara, Atyuccagāmin, Yaśottara, Śākyamuni [I], Tiṣya, Vipaśyin, Śikhin, Viśvabhū, Krakucchanda, Konākamuni, Kāśyapa, Śākyamuni [II] (also known as Siddhartha Gautama), and Maitreya. The scroll gives the buddhas' predictions of Śākyamuni's future coming as the Buddha; his four courses of training under the other buddhas; their lifespans; eons in which they lived; social class into which they were born; their assemblies of disciples; and duration of their teachings. 

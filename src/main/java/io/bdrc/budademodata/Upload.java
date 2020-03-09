@@ -44,7 +44,7 @@ public class Upload {
     public static final String XSD_PREFIX = "http://www.w3.org/2001/XMLSchema#";
     
     //public static final String FusekiBaseUrl = "http://buda1.bdrc.io:13180/fuseki/bdrcrw";
-    public static final String FusekiBaseUrl = "http://buda1.bdrc.io:13180/fuseki/corerw";
+    public static final String FusekiBaseUrl = "http://buda1.bdrc.io:13180/fuseki/newcorerw";
     public static final String FusekiDataUrl = FusekiBaseUrl+"/data";
     public static final String FusekiQueryUrl = FusekiBaseUrl+"/query";
     public static RDFConnection fuConn;
@@ -55,50 +55,6 @@ public class Upload {
         init();
     }
     
-    public static Model getOntologyBaseModel() {
-        Model res;
-        try {
-            ClassLoader classLoader = Upload.class.getClassLoader();
-            InputStream inputStream = classLoader.getResourceAsStream("owl-schema/bdrc.owl");
-            res = ModelFactory.createDefaultModel();
-            res.read(inputStream, "", "RDF/XML");
-            inputStream.close();
-        } catch (Exception e) {
-            System.err.println("Error reading ontology file");
-            return null;
-        }
-        return res;
-    }
-    
-    // change Range Datatypes from rdf:PlainLitteral to rdf:langString
-    public static void rdf10tordf11(OntModel o) {
-        Resource RDFPL = o.getResource("http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral");
-        Resource RDFLS = o.getResource("http://www.w3.org/1999/02/22-rdf-syntax-ns#langString");
-        ExtendedIterator<DatatypeProperty> it = o.listDatatypeProperties();
-        while(it.hasNext()) {
-            DatatypeProperty p = it.next();
-            if (p.hasRange(RDFPL)) {
-                p.removeRange(RDFPL);
-                p.addRange(RDFLS);
-            }
-        }
-        ExtendedIterator<Restriction> it2 = o.listRestrictions();
-        while(it2.hasNext()) {
-            Restriction r = it2.next();
-            Statement s = r.getProperty(OWL2.onDataRange); // is that code obvious? no
-            if (s != null && s.getObject().asResource().equals(RDFPL)) {
-                s.changeObject(RDFLS);
-
-            }
-        }
-    }
-    
-    public static OntModel getOntologyModel(Model baseModel) {
-        OntModel ontoModel = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM, baseModel);
-        rdf10tordf11(ontoModel);
-        return ontoModel;
-    }
-    
     public static void init() {
         //final RDFConnection fuConn = RDFConnectionFactory.connect(FusekiBaseUrl, FusekiQueryUrl, FusekiDataUrl, FusekiDataUrl);
         fuConn = RDFConnectionFuseki.create()
@@ -107,9 +63,6 @@ public class Upload {
                 .gspEndpoint(FusekiDataUrl)
                 .updateEndpoint(FusekiDataUrl)
                 .build();
-        Model baseModel = getOntologyBaseModel(); 
-        OntModel ontModel = getOntologyModel(baseModel);
-        bdrcReasoner = BDRCReasoner.getReasoner(ontModel);
     }
     
     public static void setPrefixes(Model m) {
@@ -151,17 +104,16 @@ public class Upload {
         setPrefixes(m);
         final Graph g = m.getGraph();
         addSubdir(g, "src/main/resources/files/");
-        addSubdir(g, "src/main/resources/etext/");
-        final Model infModel = ModelFactory.createInfModel(bdrcReasoner, m);
+        //addSubdir(g, "src/main/resources/etext/");
         //RDFWriter.create().source(infModel.getGraph()).lang(Lang.TTL).build().output(System.out);
-        ds.addNamedModel(graphName, infModel);
+        ds.addNamedModel(graphName, m);
         //RDFWriter.create().source(ds).lang(Lang.TRIG).build().output(System.out);
         try {
             fuConn.delete(graphName);
         } catch (HttpException e) {
             System.out.println("didn't find graph "+graphName);
         }
-        fuConn.put(graphName, infModel);
+        fuConn.put(graphName, m);
         //fuConn.putDataset(ds);
         fuConn.commit();
         fuConn.end();
