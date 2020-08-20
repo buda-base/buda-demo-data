@@ -38,7 +38,7 @@ bdr:WA0LOC0001 a :Work ;
   :language bdr:LangPgd ;
   :workHasInstance  bdr:MW0LOC0001 .
 
-bdr:MW0LOC0001 a :Work ;
+bdr:MW0LOC0001 a :Instance ;
     skos:prefLabel "Gandhari scroll (Bahubuddha Sutra)"@en ;
     skos:prefLabel "Bahubuddha-sūtra"@sa-x-iast ;
     :note bdr:W0LOC0001_N1 ;
