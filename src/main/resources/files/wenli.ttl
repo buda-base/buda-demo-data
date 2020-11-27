@@ -25,8 +25,14 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix tmp:   <http://purl.bdrc.io/ontology/tmp/> .
 
-bdr:WA1GS54155   :workHasInstance  bdr:MWSBB_WKG , bdr:WSBB_WKG .
+bdr:WASBB_WKG  a :Work ;
+   skos:prefLabel  "bka' 'gyur (wan li)"@bo-x-ewts ;
+   bdo:isRoot    true ;
+   bdo:workIsAbout  bdr:T2423 ;
+   tmp:entityScore  79 ;
+   :workHasInstance  bdr:MWSBB_WKG , bdr:WSBB_WKG .
 
 bdr:MWSBB_WKG a :Instance ;
     skos:prefLabel "Wanli Kangyur"@en ;
@@ -34,6 +40,7 @@ bdr:MWSBB_WKG a :Instance ;
     skos:altLabel "萬曆"@zh-Hant ;
     rdfs:comment "held at the Biblioteka Jagiellońska, Kraków (Poland). Images from staatsbibliothek zu Berlin (Germany)."@en ;
     rdfs:seeAlso "https://www.academia.edu/4522682/A_Preliminary_Report_on_the_Wanli_Kanjur_Kept_in_the_Jagiellonian_Library_Krak%C3%B3w"^^xsd:anyURI ;
+    tmp:thumbnailIIIFService <https://content.staatsbibliothek-berlin.de/dc/3376911134-0005> ;
   :material  bdr:MaterialPaper ;
   :script bdr:ScriptDbuCan ;
   :instanceEvent  bdr:MWSBB_EV1 ;
@@ -48,12 +55,14 @@ bda:WSBB_WKG a  adm:AdminData ;
    adm:access    bda:AccessOpen ;
    adm:adminAbout  bdr:WSBB_WKG , bdr:MWSBB_WKG , bdr:WASBB_WKG  ;
    adm:contentLegal  bda:LD_SBB_content ;
+   adm:metadataLegal  bda:LD_SBB_metadata ;
    adm:restrictedInChina  false ;
    adm:status    bda:StatusReleased .
 
 bdr:WSBB_WKG a :ImageInstance ;
   :instanceHasVolume  bdr:ISBB_W01 , bdr:ISBB_W02 , bdr:ISBB_W03 , bdr:ISBB_W04 , bdr:ISBB_W05 , bdr:ISBB_W06 , bdr:ISBB_W07 , bdr:ISBB_W08 , bdr:ISBB_W09 , bdr:ISBB_W10 , bdr:ISBB_W11 , bdr:ISBB_W12 , bdr:ISBB_W13 , bdr:ISBB_W14 , bdr:ISBB_W15 , bdr:ISBB_W16 , bdr:ISBB_W17 , bdr:ISBB_W18 , bdr:ISBB_W19 , bdr:ISBB_W20 , bdr:ISBB_W21 , bdr:ISBB_W22 , bdr:ISBB_W23 , bdr:ISBB_W24 , bdr:ISBB_W25 , bdr:ISBB_W26 , bdr:ISBB_W27 , bdr:ISBB_W28 , bdr:ISBB_W29 , bdr:ISBB_W30 , bdr:ISBB_W31 , bdr:ISBB_W32 , bdr:ISBB_W33 , bdr:ISBB_W34 , bdr:ISBB_W35 , bdr:ISBB_W36 , bdr:ISBB_W37 , bdr:ISBB_W38 , bdr:ISBB_W39 , bdr:ISBB_W40 , bdr:ISBB_W41 , bdr:ISBB_W42 , bdr:ISBB_W43 , bdr:ISBB_W44 , bdr:ISBB_W45 , bdr:ISBB_W46 , bdr:ISBB_W47 , bdr:ISBB_W48 , bdr:ISBB_W49 , bdr:ISBB_W50 , bdr:ISBB_W51 , bdr:ISBB_W52 , bdr:ISBB_W53 , bdr:ISBB_W54 , bdr:ISBB_W55 , bdr:ISBB_W56 , bdr:ISBB_W57 , bdr:ISBB_W58 , bdr:ISBB_W59 , bdr:ISBB_W60 ;
   :instanceOf  bdr:WA1GS54155 ;
+  tmp:thumbnailIIIFService <https://content.staatsbibliothek-berlin.de/dc/3376911134-0005> ;
   :instanceReproductionOf  bdr:MWSBB_WKG ;
   :itemVolumes  60 .
 
