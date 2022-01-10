@@ -25,6 +25,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix tmp:   <http://purl.bdrc.io/ontology/tmp/> .
 
 bda:WA0LOC0001 a  adm:AdminData ;
    bdo:isRoot    true ;
@@ -44,11 +45,13 @@ bdr:MW0LOC0001 a :Instance ;
     :note bdr:W0LOC0001_N1 ;
     rdfs:seeAlso "https://blogs.loc.gov/loc/2019/07/now-online-the-gandhara-scroll-a-rare-2000-year-old-text-of-early-buddhism/"^^xsd:anyURI ;
   :material  bdr:MaterialBirchBark ;
+  :instanceOf bdr:WA0LOC0001 ;
   :binding bdr:Binding_Continuous_Scroll ;
   :script bdr:ScriptKhar ;
   :instanceEvent  bdr:MW0LOC0001_EV1 ;
-  :workLcCallNumber "BQ4670 .G36" ;
-  :workLccn "2018305008" ;
+  #:workLcCallNumber "BQ4670 .G36" ;
+  #:workLccn "2018305008" ;
+  tmp:thumbnailIIIFService <https://tile.loc.gov/image-services/iiif/service:asian:asianscd:2018305008:0001> ;
   :instanceHasReproduction  bdr:W0LOC0001 .
 
 bdr:MW0LOC0001_EV1  a  bdo:CopyEvent ;
@@ -74,6 +77,7 @@ bdr:W0LOC0001 a :ImageInstance ;
   :instanceHasVolume  bdr:I0LOC0001 ;
   :instanceReproductionOf  bdr:MW0LOC0001 ;
   :instanceOf bdr:WA0LOC0001 ;
+  tmp:thumbnailIIIFService <https://tile.loc.gov/image-services/iiif/service:asian:asianscd:2018305008:0001> ;
   :itemVolumes  1 .
 
 bdr:I0LOC0001 a :ImageGroup ;

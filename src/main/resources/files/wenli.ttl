@@ -27,11 +27,7 @@
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix tmp:   <http://purl.bdrc.io/ontology/tmp/> .
 
-bdr:WASBB_WKG  a :Work ;
-   skos:prefLabel  "bka' 'gyur (wan li)"@bo-x-ewts ;
-   bdo:isRoot    true ;
-   bdo:workIsAbout  bdr:T2423 ;
-   tmp:entityScore  79 ;
+bdr:WA0BC001  a :Work ;
    :workHasInstance  bdr:MWSBB_WKG , bdr:WSBB_WKG .
 
 bdr:MWSBB_WKG a :Instance ;
@@ -44,7 +40,7 @@ bdr:MWSBB_WKG a :Instance ;
   :material  bdr:MaterialPaper ;
   :script bdr:ScriptDbuCan ;
   :instanceEvent  bdr:MWSBB_EV1 ;
-  :instanceOf  bdr:WA1GS54155 ;
+  :instanceOf bdr:WA0BC001 ;
   :instanceHasReproduction  bdr:WSBB_WKG .
 
 bdr:MWSBB_EV1  a  bdo:PublishedEvent ;
@@ -53,7 +49,7 @@ bdr:MWSBB_EV1  a  bdo:PublishedEvent ;
 bda:WSBB_WKG a  adm:AdminData ;
    bdo:isRoot    true ;
    adm:access    bda:AccessOpen ;
-   adm:adminAbout  bdr:WSBB_WKG , bdr:MWSBB_WKG , bdr:WASBB_WKG  ;
+   adm:adminAbout  bdr:WSBB_WKG , bdr:MWSBB_WKG ;
    adm:contentLegal  bda:LD_SBB_content ;
    adm:metadataLegal  bda:LD_SBB_metadata ;
    adm:restrictedInChina  false ;
@@ -61,7 +57,7 @@ bda:WSBB_WKG a  adm:AdminData ;
 
 bdr:WSBB_WKG a :ImageInstance ;
   :instanceHasVolume  bdr:ISBB_W01 , bdr:ISBB_W02 , bdr:ISBB_W03 , bdr:ISBB_W04 , bdr:ISBB_W05 , bdr:ISBB_W06 , bdr:ISBB_W07 , bdr:ISBB_W08 , bdr:ISBB_W09 , bdr:ISBB_W10 , bdr:ISBB_W11 , bdr:ISBB_W12 , bdr:ISBB_W13 , bdr:ISBB_W14 , bdr:ISBB_W15 , bdr:ISBB_W16 , bdr:ISBB_W17 , bdr:ISBB_W18 , bdr:ISBB_W19 , bdr:ISBB_W20 , bdr:ISBB_W21 , bdr:ISBB_W22 , bdr:ISBB_W23 , bdr:ISBB_W24 , bdr:ISBB_W25 , bdr:ISBB_W26 , bdr:ISBB_W27 , bdr:ISBB_W28 , bdr:ISBB_W29 , bdr:ISBB_W30 , bdr:ISBB_W31 , bdr:ISBB_W32 , bdr:ISBB_W33 , bdr:ISBB_W34 , bdr:ISBB_W35 , bdr:ISBB_W36 , bdr:ISBB_W37 , bdr:ISBB_W38 , bdr:ISBB_W39 , bdr:ISBB_W40 , bdr:ISBB_W41 , bdr:ISBB_W42 , bdr:ISBB_W43 , bdr:ISBB_W44 , bdr:ISBB_W45 , bdr:ISBB_W46 , bdr:ISBB_W47 , bdr:ISBB_W48 , bdr:ISBB_W49 , bdr:ISBB_W50 , bdr:ISBB_W51 , bdr:ISBB_W52 , bdr:ISBB_W53 , bdr:ISBB_W54 , bdr:ISBB_W55 , bdr:ISBB_W56 , bdr:ISBB_W57 , bdr:ISBB_W58 , bdr:ISBB_W59 , bdr:ISBB_W60 ;
-  :instanceOf  bdr:WA1GS54155 ;
+  :instanceOf  bdr:WA0BC001 ;
   tmp:thumbnailIIIFService <https://content.staatsbibliothek-berlin.de/dc/3376911134-0005> ;
   :instanceReproductionOf  bdr:MWSBB_WKG ;
   :itemVolumes  60 .
@@ -70,7 +66,7 @@ bda:ISBB_W01
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB0002354500000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W01 .
 
-bdr:ISBB_W01 a :VolumeImageAsset ;
+bdr:ISBB_W01 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/3376911134/manifest> ;
   :volumeNumber 1 ;
     skos:prefLabel "འབྲུ་མ་ཆེན་མོ་"@bo ;
@@ -81,7 +77,7 @@ bda:ISBB_W02
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB0002354600000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W02 .
 
-bdr:ISBB_W02 a :VolumeImageAsset ;
+bdr:ISBB_W02 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/3376911142/manifest> ;
   :volumeNumber 2 ;
     skos:prefLabel "རྣམ་རྒྱལ་"@bo ;
@@ -92,7 +88,7 @@ bda:ISBB_W03
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB000238E100000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W03 .
 
-bdr:ISBB_W03 a :VolumeImageAsset ;
+bdr:ISBB_W03 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/3376911770/manifest> ;
    :volumeNumber 3 ;
     skos:prefLabel "གསང་སྔགས"@bo ;
@@ -103,7 +99,7 @@ bda:ISBB_W04
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB000238E200000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W04 .
 
-bdr:ISBB_W04 a :VolumeImageAsset ;
+bdr:ISBB_W04 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/3376911797/manifest> ;
   :volumeNumber 4 ;
     skos:prefLabel "ཚེ་དཔག་མེད"@bo ;
@@ -114,7 +110,7 @@ bda:ISBB_W05
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB000239B500000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W05 .
 
-bdr:ISBB_W05 a :VolumeImageAsset ;
+bdr:ISBB_W05 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/3376911983/manifest> ;
   :volumeNumber 5 ;
     skos:prefLabel "སེམས་རངས"@bo ;
@@ -125,7 +121,7 @@ bda:ISBB_W06
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB000238E500000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W06 .
 
-bdr:ISBB_W06 a :VolumeImageAsset ;
+bdr:ISBB_W06 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/3376911819/manifest> ;
   :volumeNumber 6 ;
     skos:prefLabel "འཁོར་ཆེན"@bo ;
@@ -136,7 +132,7 @@ bda:ISBB_W07
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB000238E800000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W07 .
 
-bdr:ISBB_W07 a :VolumeImageAsset ;
+bdr:ISBB_W07 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/3376911835/manifest> ;
   :volumeNumber 7 ;
     skos:prefLabel "རྨ་བྱ་མདོ"@bo ;
@@ -147,7 +143,7 @@ bda:ISBB_W08
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB000238E900000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W08 .
 
-bdr:ISBB_W08 a :VolumeImageAsset ;
+bdr:ISBB_W08 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/3376911851/manifest> ;
   :volumeNumber 8 ;
     skos:prefLabel "རྡོ་རྗེ་འཇིགས་བྱེད་"@bo ;
@@ -158,7 +154,7 @@ bda:ISBB_W09
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB000238EA00000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W09 .
 
-bdr:ISBB_W09 a :VolumeImageAsset ;
+bdr:ISBB_W09 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/3376911878/manifest> ;
   :volumeNumber 9 ;
     skos:prefLabel "ཧྲི་པད་མ"@bo ;
@@ -169,7 +165,7 @@ bda:ISBB_W10
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB000238EB00000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W10 .
 
-bdr:ISBB_W10 a :VolumeImageAsset ;
+bdr:ISBB_W10 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/3376911894/manifest> ;
   :volumeNumber 10 ;
     skos:prefLabel "ལྷ་རེ་གཉིས"@bo ;
@@ -180,7 +176,7 @@ bda:ISBB_W11
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB00023A0B00000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W11 .
 
-bdr:ISBB_W11 a :VolumeImageAsset ;
+bdr:ISBB_W11 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/3376912068/manifest> ;
   :volumeNumber 11 ;
     skos:prefLabel "རྡོ་རྗེ་མདོ"@bo ;
@@ -191,7 +187,7 @@ bda:ISBB_W12
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB00023A0D00000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W12 .
 
-bdr:ISBB_W12 a :VolumeImageAsset ;
+bdr:ISBB_W12 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/3376912084/manifest> ;
   :volumeNumber 12 ;
     skos:prefLabel "བསྲུངས་འཁོར་མིའི་རྒྱལ་པོ"@bo ;
@@ -202,7 +198,7 @@ bda:ISBB_W13
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB00023A0E00000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W13 .
 
-bdr:ISBB_W13 a :VolumeImageAsset ;
+bdr:ISBB_W13 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/3376912106/manifest> ;
   :volumeNumber 13 ;
     skos:prefLabel "མཚན་བརྗོད"@bo ;
@@ -213,7 +209,7 @@ bda:ISBB_W14
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB00023A0F00000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W14 .
 
-bdr:ISBB_W14 a :VolumeImageAsset ;
+bdr:ISBB_W14 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/3376912122/manifest> ;
   :volumeNumber 14 ;
     skos:prefLabel "གསང་རྟོ"@bo ;
@@ -224,7 +220,7 @@ bda:ISBB_W15
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB0002430200000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W15 .
 
-bdr:ISBB_W15 a :VolumeImageAsset ;
+bdr:ISBB_W15 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/3376912238/manifest> ;
   :volumeNumber 15 ;
     skos:prefLabel "ཤཱཀྱ་ཐུབ་པ་"@bo ;
@@ -235,7 +231,7 @@ bda:ISBB_W16
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB0002430300000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W16 .
 
-bdr:ISBB_W16 a :VolumeImageAsset ;
+bdr:ISBB_W16 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/3376912246/manifest> ;
   :volumeNumber 16 ;
     skos:prefLabel "ཡོངས་སུ་མྱ་ངན"@bo ;
@@ -246,7 +242,7 @@ bda:ISBB_W17
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB0002437500000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W17 .
 
-bdr:ISBB_W17 a :VolumeImageAsset ;
+bdr:ISBB_W17 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/3376912254/manifest> ;
   :volumeNumber 17 ;
     skos:prefLabel "སའི་སྙིང་པོ"@bo ;
@@ -257,7 +253,7 @@ bda:ISBB_W18
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB0002437600000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W18 .
 
-bdr:ISBB_W18 a :VolumeImageAsset ;
+bdr:ISBB_W18 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/3376912262/manifest> ;
   :volumeNumber 18 ;
     skos:prefLabel "ཀླུའི་རྒྱལ་པོ"@bo ;
@@ -268,7 +264,7 @@ bda:ISBB_W19
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB0002437700000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W19 .
 
-bdr:ISBB_W19 a :VolumeImageAsset ;
+bdr:ISBB_W19 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/3376912270/manifest> ;
   :volumeNumber 19 ;
     skos:prefLabel "འོད་དཔག་མེད"@bo ;
@@ -279,7 +275,7 @@ bda:ISBB_W20
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB0002437800000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W20 .
 
-bdr:ISBB_W20 a :VolumeImageAsset ;
+bdr:ISBB_W20 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/3376912289/manifest> ;
   :volumeNumber 20 ;
     skos:prefLabel "བདེ་མཆོག"@bo ;
@@ -290,7 +286,7 @@ bda:ISBB_W21
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB0002437900000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W21 .
 
-bdr:ISBB_W21 a :VolumeImageAsset ;
+bdr:ISBB_W21 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/3376912297/manifest> ;
   :volumeNumber 21 ;
     skos:prefLabel "ལྷ་ཚོགས་ཀྱི་མཚན"@bo ;
@@ -301,7 +297,7 @@ bda:ISBB_W22
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB0002437A00000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W22 .
 
-bdr:ISBB_W22 a :VolumeImageAsset ;
+bdr:ISBB_W22 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/3376912300/manifest> ;
   :volumeNumber 22 ;
     skos:prefLabel "མདོ་སྣ་ཚོགས"@bo ;
@@ -312,7 +308,7 @@ bda:ISBB_W23
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB000254A300000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W23 .
 
-bdr:ISBB_W23 a :VolumeImageAsset ;
+bdr:ISBB_W23 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/1040700640/manifest> ;
   :volumeNumber 23 ;
     skos:prefLabel "འཇམ་དཔལ་ཡེ་ཤེས་སེམས་དཔའི་དོན་དམ་པའི་མཚན་ཡང་དག་པར་བརྗོད་པ"@bo ;
@@ -323,7 +319,7 @@ bda:ISBB_W24
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB000254A400000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W24 .
 
-bdr:ISBB_W24 a :VolumeImageAsset ;
+bdr:ISBB_W24 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/1040701094/manifest> ;
   :volumeNumber 24 ;
     skos:prefLabel "དཔལ་གསང་བ་རྡོ་རྗེ་རྒྱུད་ཀྱི་རྒྱལ་པོ"@bo ;
@@ -334,7 +330,7 @@ bda:ISBB_W25
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB000254A500000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W25 .
 
-bdr:ISBB_W25 a :VolumeImageAsset ;
+bdr:ISBB_W25 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/104070140X/manifest> ;
   :volumeNumber 25 ;
     skos:prefLabel "སྟོང་ཕྲག་གི་ཚད་དུ་ཉི་མའི་དཀྱིལ་འཁོར་ཆེན་པོ་བྱིན་གྱིས་བརླབས་ནས་དེའི་དབུས་སུ་གནས་པར་གྱུར་ཏོ"@bo ;
@@ -345,7 +341,7 @@ bda:ISBB_W26
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB000254C600000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W26 .
 
-bdr:ISBB_W26 a :VolumeImageAsset ;
+bdr:ISBB_W26 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/1040731104/manifest> ;
   :volumeNumber 26 ;
     skos:prefLabel "འཕགས་པ་ལག་ན་རྡོ་རྗེ་དབང་བསྐུར་བའི་རྒྱུད་ཆེན་པོ་བམ་པོ་དང་པོ"@bo ;
@@ -356,7 +352,7 @@ bda:ISBB_W27
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB000254C700000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W27 .
 
-bdr:ISBB_W27 a :VolumeImageAsset ;
+bdr:ISBB_W27 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/104073152X/manifest> ;
   :volumeNumber 27 ;
     skos:prefLabel "འཕགས་པ་དོན་ཡོད་པའི་ཞགས་པའི་ཆོ་ག་ཞིབ་མོའི་རྒྱལ་པོ་བམ་པོ་དང་པོ"@bo ;
@@ -367,7 +363,7 @@ bda:ISBB_W28
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB000254C800000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W28 .
 
-bdr:ISBB_W28 a :VolumeImageAsset ;
+bdr:ISBB_W28 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/1040731864/manifest> ;
   :volumeNumber 28 ;
     skos:prefLabel "ལྷ་མོ་སྒྱུ་འཕྲུལ་དྲ་བ་ཆེན་མོ་ཞེས་བྱ་བའི་རྒྱུད"@bo ;
@@ -378,7 +374,7 @@ bda:ISBB_W29
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB000254C900000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W29 .
 
-bdr:ISBB_W29 a :VolumeImageAsset ;
+bdr:ISBB_W29 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/1040732135/manifest> ;
   :volumeNumber 29 ;
     skos:prefLabel "ཤེས་རབ་ཀྱི་ཕ་རོལ་ཏུ་ཕྱིན་པ་སྟོང་ཕྲག་བརྒྱ་པ་དུམ་བུ་བཅུ་བཞི་པ་བམ་པོ་ཉིས་བརྒྱ་བརྒྱད་བཅུ་པ"@bo ;
@@ -389,7 +385,7 @@ bda:ISBB_W30
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB000254CE00000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W30 .
 
-bdr:ISBB_W30 a :VolumeImageAsset ;
+bdr:ISBB_W30 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/1040735428/manifest> ;
   :volumeNumber 30 ;
     skos:prefLabel "ཤེས་རབ་ཀྱི་ཕ་རོལ་ཏུ་ཕྱིན་པ་སྟོང་ཕྲག་བརྒྱ་པ་དུམ་བུ་ལྔ་པ་བམ་པོ་བརྒྱད་བཅུ་ལྔ་པ"@bo ;
@@ -400,7 +396,7 @@ bda:ISBB_W31
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB000254CF00000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W31 .
 
-bdr:ISBB_W31 a :VolumeImageAsset ;
+bdr:ISBB_W31 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/1040735622/manifest> ;
   :volumeNumber 31 ;
     skos:prefLabel "ཤེས་རབ་ཀྱི་ཕ་རོལ་ཏུ་ཕྱིན་པ་སྟོང་ཕྲག་བརྒྱ་པ་དུམ་བུ་དྲུག་པ་བམ་པོ་བརྒྱ་བརྒྱད་པ"@bo ;
@@ -411,7 +407,7 @@ bda:ISBB_W32
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB000254D000000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W32 .
 
-bdr:ISBB_W32 a :VolumeImageAsset ;
+bdr:ISBB_W32 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/1040735789/manifest> ;
   :volumeNumber 32 ;
     skos:prefLabel "ཤེས་རབ་ཀྱི་ཕ་རོལ་ཏུ་ཕྱིན་པ་སྟོང་ཕྲག་བརྒྱ་པ་དུམ་བུ་བཅུ་གཉིས་པ་བམ་པོ་ཉིས་བརྒྱ་སུམ་བཅུ་བརྒྱད་པ"@bo ;
@@ -422,7 +418,7 @@ bda:ISBB_W33
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB000254D300000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W33 .
 
-bdr:ISBB_W33 a :VolumeImageAsset ;
+bdr:ISBB_W33 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/1040739628/manifest> ;
   :volumeNumber 33 ;
     skos:prefLabel "ཤེས་རབ་ཀྱི་ཕ་རོལ་ཏུ་ཕྱིན་པ་སྟོང་ཕྲག་བརྒྱ་པ་དུམ་བུ་བཅུ་གཉིས་པ་བམ་པོ་ཉིས་བརྒྱ་བཅུ་ལྔ་པ"@bo ;
@@ -433,7 +429,7 @@ bda:ISBB_W34
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB000254D400000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W34 .
 
-bdr:ISBB_W34 a :VolumeImageAsset ;
+bdr:ISBB_W34 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/1040739814/manifest> ;
   :volumeNumber 34 ;
     skos:prefLabel "ཤེས་རབ་ཀྱི་ཕ་རོལ་ཏུ་ཕྱིན་པ་སྟོང་ཕྲག་བརྒྱ་པ་དུམ་བུ་བཅུ་གསུམ་པ་བམ་པོ་ཉིས་བརྒྱ་ལྷག་བཅུ་དགུ་པ"@bo ;
@@ -444,7 +440,7 @@ bda:ISBB_W35
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB000254E100000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W35 .
 
-bdr:ISBB_W35 a :VolumeImageAsset ;
+bdr:ISBB_W35 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/1040786847/manifest> ;
   :volumeNumber 35 ;
     skos:prefLabel "ཤེས་རབ་ཀྱི་ཕ་རོལ་ཏུ་ཕྱིན་པ་སྟོང་ཕྲག་བརྒྱ་པ་དུམ་བུ་གསུམ་པ་བམ་པོ་བཞི་བཅུ་གཉིས་པ"@bo ;
@@ -455,7 +451,7 @@ bda:ISBB_W36
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB000254E200000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W36 .
 
-bdr:ISBB_W36 a :VolumeImageAsset ;
+bdr:ISBB_W36 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/1040787045/manifest> ;
   :volumeNumber 36 ;
     skos:prefLabel "ཤེས་རབ་ཀྱི་ཕ་རོལ་ཏུ་ཕྱིན་པ་སྟོང་ཕྲག་བརྒྱ་པ་དུམ་བུ་དང་པོ་བམ་པོ་ཐོག་མ"@bo ;
@@ -466,7 +462,7 @@ bda:ISBB_W37
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB000254E300000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W37 .
 
-bdr:ISBB_W37 a :VolumeImageAsset ;
+bdr:ISBB_W37 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/1040787223/manifest> ;
   :volumeNumber 37 ;
     skos:prefLabel "ཤེས་རབ་ཀྱི་ཕ་རོལ་ཏུ་ཕྱིན་པ་སྟོང་ཕྲག་བརྒྱ་པ་དུམ་བུ་གཉིས་པ་བམ་པོ་ཉི་ཤུ་པ"@bo ;
@@ -477,7 +473,7 @@ bda:ISBB_W38
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB000254E500000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W38 .
 
-bdr:ISBB_W38 a :VolumeImageAsset ;
+bdr:ISBB_W38 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/1040788793/manifest> ;
   :volumeNumber 38 ;
     skos:prefLabel "དཔལ་མཁའ་འགྲོ་རྒྱ་མཚོ་ཆེན་པོ་རྣལ་འབྱོར་མའི་རྒྱུད་ཀྱི་རྒྱལ་པོ"@bo ;
@@ -488,7 +484,7 @@ bda:ISBB_W39
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB000254E600000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W39 .
 
-bdr:ISBB_W39 a :VolumeImageAsset ;
+bdr:ISBB_W39 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/1040789102/manifest> ;
   :volumeNumber 39 ;
     skos:prefLabel "དཔལ་ཡེ་ཤེས་སྙིང་པོ་ཞེས་བྱ་བ་རྣལ་འབྱོར་མ་ཆེན་མོའི་རྒྱུད་ཀྱི་རྒྱལ་པོའི་རྒྱལ་པོ"@bo ;
@@ -499,7 +495,7 @@ bda:ISBB_W40
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB000254E700000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W40 .
 
-bdr:ISBB_W40 a :VolumeImageAsset ;
+bdr:ISBB_W40 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/1040789323/manifest> ;
   :volumeNumber 40 ;
     skos:prefLabel "འཕགས་པ་མི་གཡོ་བའི་རྟོག་པའི་རྒྱུད་ཀྱི་རྒྱལ་པོ"@bo ;
@@ -510,7 +506,7 @@ bda:ISBB_W41
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB000254E800000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W41 .
 
-bdr:ISBB_W41 a :VolumeImageAsset ;
+bdr:ISBB_W41 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/1040789501/manifest> ;
   :volumeNumber 41 ;
     skos:prefLabel "དཔལ་རྡོ་རྗེ་སྙིང་པོ་རྒྱན་ཅེས་བྱ་བའི་རྒྱུད་ཀྱི་རྒྱལ་པོ་ཆེན་པོ"@bo ;
@@ -521,7 +517,7 @@ bda:ISBB_W42
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB000254E900000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W42 .
 
-bdr:ISBB_W42 a :VolumeImageAsset ;
+bdr:ISBB_W42 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/1040789641/manifest> ;
   :volumeNumber 42 ;
     skos:prefLabel "འཇིག་རྟེན་གསུམ་ལས་རྣམ་པར་རྒྱལ་བ་རྟོག་པའི་རྒྱལ་པོ་ཆེན་པོ"@bo ;
@@ -532,7 +528,7 @@ bda:ISBB_W43
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB000254EC00000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W43 .
 
-bdr:ISBB_W43 a :VolumeImageAsset ;
+bdr:ISBB_W43 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/1040796583/manifest> ;
   :volumeNumber 43 ;
     skos:prefLabel "དེ་བཞིན་གཤེགས་པ་ཐམས་ཅད་ཀྱི་དེ་ཁོ་ན་ཉིད་བསྡུས་པ་ཞེས་བྱ་བ་ཐེག་པ་ཆེན་པོའི་མདོ"@bo ;
@@ -543,7 +539,7 @@ bda:ISBB_W44
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB000254EE00000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W44 .
 
-bdr:ISBB_W44 a :VolumeImageAsset ;
+bdr:ISBB_W44 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/1040797067/manifest> ;
   :volumeNumber 44 ;
     skos:prefLabel "ཕྱག་ན་རྡོ་རྗེ་གོས་སྔོན་པོ་ཅན་གནོད་སྦྱིན་དྲག་པོ་ཆེན་པོ་རྡོ་རྗེ་མེ་ལྕེའི་རྒྱུད"@bo ;
@@ -554,7 +550,7 @@ bda:ISBB_W45
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB000254EF00000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W45 .
 
-bdr:ISBB_W45 a :VolumeImageAsset ;
+bdr:ISBB_W45 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/1040797261/manifest> ;
   :volumeNumber 45 ;
     skos:prefLabel "མཆོད་པའི་སྤྲིན་ཞེས་བྱ་བའི་གཟུངས"@bo ;
@@ -565,7 +561,7 @@ bda:ISBB_W46
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB000254A000000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W46 .
 
-bdr:ISBB_W46 a :VolumeImageAsset ;
+bdr:ISBB_W46 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/1040700292/manifest> ;
   :volumeNumber 46 ;
     skos:prefLabel "mantras"@en ;
@@ -575,7 +571,7 @@ bda:ISBB_W47
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB000254F000000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W47 .
 
-bdr:ISBB_W47 a :VolumeImageAsset ;
+bdr:ISBB_W47 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/104079744X/manifest> ;
   :volumeNumber 47 ;
     skos:prefLabel "ཤེས་རབ་ཀྱི་ཕ་རོལ་ཏུ་ཕྱིན་པ་སྟོང་ཕྲག་བརྒྱ་པ་དུམ་བུ་བརྒྱད་པ་བམ་པོ་བརྒྱ་ལྔ་བཅུ་གཉིས་པ"@bo ;
@@ -586,7 +582,7 @@ bda:ISBB_W48
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB000254F100000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W48 .
 
-bdr:ISBB_W48 a :VolumeImageAsset ;
+bdr:ISBB_W48 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/1040797768/manifest> ;
   :volumeNumber 48 ;
     skos:prefLabel "སྤྱན་འདྲེན་རྒྱུད་གསུམ་པ་"@bo ;
@@ -597,7 +593,7 @@ bda:ISBB_W49
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB000254F200000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W49 .
 
-bdr:ISBB_W49 a :VolumeImageAsset ;
+bdr:ISBB_W49 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/1040797954/manifest> ;
   :volumeNumber 49 ;
     skos:prefLabel "ཤེས་རབ་ཀྱི་ཕ་རོལ་ཏུ་ཕྱིན་པ་སྟོང་ཕྲག་བརྒྱ་པ་དུམ་བུ་བཅུ་གཉིས་པ་བམ་པོ་ཉིས་བརྒྱ་སུམ་བཅུ་བརྒྱད་པ"@bo ;
@@ -608,7 +604,7 @@ bda:ISBB_W50
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB000254F300000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W50 .
 
-bdr:ISBB_W50 a :VolumeImageAsset ;
+bdr:ISBB_W50 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/1040798195/manifest> ;
   :volumeNumber 50 ;
     skos:prefLabel "འཕགས་པ་རྡོ་རྗེ་རི་རབ་ཆེན་པོའི་རྩེ་མོའི་ཁང་པ་བརྩེགས་པའི་གཟུངས"@bo ;
@@ -619,7 +615,7 @@ bda:ISBB_W51
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB000254FD00000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W51 .
 
-bdr:ISBB_W51 a :VolumeImageAsset ;
+bdr:ISBB_W51 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/1040799442/manifest> ;
   :volumeNumber 51 ;
     skos:prefLabel "འཕགས་པ་སྤྱན་རས་གཟིགས་དབང་ཕྱུག་གི་གསང་པའི་མཛོད་ཐོགས་པ་མེད་པའི་ཡིད་བཞིན་གྱི་འཁོར་ལོའི་སྙིང་པོ་ཞེས་བྱ་བའི་གཟུངས"@bo ;
@@ -630,7 +626,7 @@ bda:ISBB_W52
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB000254F400000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W52 .
 
-bdr:ISBB_W52 a :VolumeImageAsset ;
+bdr:ISBB_W52 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/1040798357/manifest> ;
   :volumeNumber 52 ;
     skos:prefLabel "འཕགས་པ་རྡོ་རྗེ་ས་འོག་གི་རྒྱུད་ཀྱི་རྒྱལ་པོ"@bo ;
@@ -641,7 +637,7 @@ bda:ISBB_W53
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB000254F500000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W53 .
 
-bdr:ISBB_W53 a :VolumeImageAsset ;
+bdr:ISBB_W53 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/1040798497/manifest> ;
   :volumeNumber 53 ;
     skos:prefLabel "ཆོས་ཐམས་ཅད་རྫོགས་པ་ཆེན་པོ་བྱང་ཆུབ་ཀྱི་སེམས་ཀུན་བྱེད་རྒྱལ་པོ"@bo ;
@@ -652,7 +648,7 @@ bda:ISBB_W54
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB000254F600000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W54 .
 
-bdr:ISBB_W54 a :VolumeImageAsset ;
+bdr:ISBB_W54 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/1040798586/manifest> ;
   :volumeNumber 54 ;
     skos:prefLabel "དེ་བཞིན་གཤེགས་པ་ཐམས་ཅད་ཀྱི་ཐུགས་གསང་བའི་ཡེ་ཤེས་དོན་གྱི་སྙིང་པོ་ཁྲོ་རྡོ་རྗེའི་རིགས་ཀུན་འདུས་རིག་པའི་མདོ་རྣལ་འབྱོར་གྲུབ་པའི་རྒྱུད་ཅེས་བྱ་བ་ཐེག་པ་ཆེན་པོའི་མདོ"@bo ;
@@ -663,7 +659,7 @@ bda:ISBB_W55
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB000254F700000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W55 .
 
-bdr:ISBB_W55 a :VolumeImageAsset ;
+bdr:ISBB_W55 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/1040798659/manifest> ;
   :volumeNumber 55 ;
     skos:prefLabel "བྱང་ཆུབ་ཀྱི་སྙིང་པོའི་རྒྱན་འབུམ་གྱི་གཟུངས"@bo ;
@@ -674,7 +670,7 @@ bda:ISBB_W56
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB000254F800000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W56 .
 
-bdr:ISBB_W56 a :VolumeImageAsset ;
+bdr:ISBB_W56 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/1040798799/manifest> ;
   :volumeNumber 56 ;
     skos:prefLabel "འཕགས་པ་རྣམ་པར་མི་རྟོག་པར་འཇུག་པ་ཞེས་བྱ་བའི་གཟུངས"@bo ;
@@ -685,7 +681,7 @@ bda:ISBB_W57
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB000254F900000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W57 .
 
-bdr:ISBB_W57 a :VolumeImageAsset ;
+bdr:ISBB_W57 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/1040798942/manifest> ;
   :volumeNumber 57 ;
     skos:prefLabel "འཕགས་པ་གསེར་འོད་དམ་པ་མདོ་སྡེའི་དབང་པོའི་རྒྱལ་པོ་ཞེས་བྱ་བ་ཐེག་པ་ཆེན་པོའི་མདོ"@bo ;
@@ -696,7 +692,7 @@ bda:ISBB_W58
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB000254FA00000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W58 .
 
-bdr:ISBB_W58 a :VolumeImageAsset ;
+bdr:ISBB_W58 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/1040799051/manifest> ;
   :volumeNumber 58 ;
     skos:prefLabel "ཤེས་རབ་ཀྱི་ཕ་རོལ་ཏུ་ཕྱིན་པ་སྟོང་ཕྲག་བརྒྱ་པ་དུམ་བུ་བཅུ་པ་བམ་པོ་བརྒྱ་དགུ་བཅུ་གསུམ་པ"@bo ;
@@ -707,7 +703,7 @@ bda:ISBB_W59
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB000254FB00000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W59 .
 
-bdr:ISBB_W59 a :VolumeImageAsset ;
+bdr:ISBB_W59 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/1040799167/manifest> ;
   :volumeNumber 59 ;
     skos:prefLabel "ཤེས་རབ་ཀྱི་ཕ་རོལ་ཏུ་ཕྱིན་པ་སྟོང་ཕྲག་བརྒྱ་པ་དུམ་བུ་གཉིས་པ་བམ་པོ་ཉི་ཤུ་པ"@bo ;
@@ -718,7 +714,7 @@ bda:ISBB_W60
    adm:originalRecord "http://resolver.staatsbibliothek-berlin.de/SBB000254FC00000000"^^xsd:anyURI ;
    adm:adminAbout bdr:ISBB_W60 .
 
-bdr:ISBB_W60 a :VolumeImageAsset ;
+bdr:ISBB_W60 a :ImageGroup ;
    :hasIIIFManifest  <https://content.staatsbibliothek-berlin.de/dc/1040799280/manifest> ;
   :volumeNumber 60 ;
     skos:prefLabel "བདེ་བར་གཤེགས་པའི་གསུང་རབ་རིན་པོ་ཆེའི་དཀར་ཆགས"@bo ;
